@@ -10,8 +10,9 @@
 # General Public License for more details.
 
 # This program has been modified from its original source
-# (renderer2.py) to fit in Advanced Programming 2016 week 3 exercise.
+# (renderer2.py) to fit in Advanced Programming lab exercise.
 
+import Qtrac
 import abc
 import sys
 import textwrap
@@ -19,7 +20,6 @@ if sys.version_info[:2] < (3, 2):
     from xml.sax.saxutils import escape
 else:
     from html import escape
-import Qtrac
 
 
 @Qtrac.has_methods("header", "paragraph", "footer")
@@ -75,16 +75,15 @@ class Page:
     def __init__(self, title, renderer):
         if not isinstance(renderer, Renderer):
             raise TypeError("Expected object of type Renderer, got {}".
-                    format(type(renderer).__name__))
+                            format(type(renderer).__name__))
         self.title = title
         self.renderer = renderer
         self.paragraphs = []
 
-
     def add_paragraph(self, paragraph):
         """
-        Adds a new paragraph into its respective collection. The 
-        collection (i.e. list of `paragraphs`) contains all paragraphs 
+        Adds a new paragraph into its respective collection. The
+        collection (i.e. list of `paragraphs`) contains all paragraphs
         that will be written into the page.
         """
         # TODO Implement me!
@@ -106,11 +105,9 @@ class TextRenderer:
         self.file = file
         self.previous = False
 
-
     def header(self, title):
         self.file.write("{0:^{2}}\n{1:^{2}}\n".format(title,
-                "=" * len(title), self.width))
-
+                        "=" * len(title), self.width))
 
     def paragraph(self, text):
         if self.previous:
@@ -119,10 +116,9 @@ class TextRenderer:
         self.file.write("\n")
         self.previous = True
 
-
     def footer(self):
         """
-        Adds a new line containing string "END OF TEXT PAGE" at the end 
+        Adds a new line containing string "END OF TEXT PAGE" at the end
         of written text.
         """
         # TODO Implement me!
@@ -134,10 +130,8 @@ class HtmlWriter:
     def __init__(self, file=sys.stdout):
         self.file = file
 
-
     def header(self):
         self.file.write("<!doctype html>\n<html>\n")
-
 
     def title(self, title):
         self.file.write("<head><title>{}</title></head>\n".format(
@@ -146,14 +140,11 @@ class HtmlWriter:
     def start_body(self):
         self.file.write("<body>\n")
 
-
     def body(self, text):
         self.file.write("<p>{}</p>\n".format(escape(text)))
 
-
     def end_body(self):
         self.file.write("</body>\n")
-
 
     def footer(self):
         self.file.write("</html>\n")
@@ -165,20 +156,18 @@ class HtmlRenderer:
         # TODO Implement me!
         pass
 
-
     def header(self, title):
         # TODO Implement me!
         pass
-
 
     def paragraph(self, text):
         # TODO Implement me!
         pass
 
-
     def footer(self):
         # TODO Implement me!
         pass
+
 
 class MarkdownRenderer:
 
@@ -197,6 +186,7 @@ class MarkdownRenderer:
     def footer(self):
         pass
 
+
 class MarkdownWriter:
 
     def __init__(self, file=sys.stdout):
@@ -204,27 +194,25 @@ class MarkdownWriter:
 
     def header_level_1(self, text):
         """
-        Writes a 1st level heading text in Markdown format. Example 
+        Writes a 1st level heading text in Markdown format. Example
         of 1st level heading:
-        
-        Lorem Ipsum Dolor Sit Amet
-        ==========================
 
-        Notice that the heading text is followed by a sequence of 
-        '=' symbols whose length is equal to the lenght of the 
-        heading text. Both heading text and sequence of '=' symbols 
-        are also appended with a new line symbol ('\n')
+        # Lorem Ipsum Dolor Sit Amet
+
+        Notice that the heading text contains a single '#' symbol followed
+        by a whitespace at the beginning of text
         """
         # TODO Implement me!
         pass
 
     def paragraph(self, text):
         """
-        Writes a paragraph text in Markdown format. The text is 
+        Writes a paragraph text in Markdown format. The text is
         simply written and appended with a new line symbol ('\n')
         """
         # TODO Implement me!
         pass
+
 
 if __name__ == "__main__":
     main()

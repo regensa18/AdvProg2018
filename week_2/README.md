@@ -1,12 +1,10 @@
 Exercise 2: Builder Pattern
 ===========================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, February 19th 2016*
 
 Your task in this exercise is to continue an example of Builder 
 pattern implementation. You are required to complete several methods 

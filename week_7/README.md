@@ -1,12 +1,10 @@
 Exercise 7: Ensuring Correctness in Concurrent Program
 ======================================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, April 15th 2016*
 
 Your main task in this exercise is to analyse and fix a concurrent 
 program. You are given a program that simulates multiple customers 

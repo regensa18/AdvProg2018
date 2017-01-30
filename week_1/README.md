@@ -1,12 +1,10 @@
 Exercise 1: Abstract Factory Pattern
 ====================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, February 12th 2016*
 
 You are given a partially completed program that using Abstract 
 Factory Pattern in its diagram creation functionality. Your task 

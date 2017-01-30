@@ -11,32 +11,12 @@
 # This test suite contains unit tests for testing mandatory and
 # additional exercise components for week 3 exercise.
 
-import sys
+import sys  # noqa
 import unittest
+from .mock import MockRenderer, MockOutput
 from week3 import Page, TextRenderer, HtmlWriter, HtmlRenderer
-if sys.version_info[:2] < (3, 2):
-    from xml.sax.saxutils import escape
-else:
-    from html import escape
+from html import escape
 
-class MockRenderer:
-
-    def header(self, title):
-        print(title)
-
-    def paragraph(self, text):
-        print(text)
-
-    def footer(self):
-        print("footer")
-
-class MockOutput:
-
-    def __init__(self):
-        self.buffer = list()
-
-    def write(self, text):
-        self.buffer.append(text)
 
 class PageTest(unittest.TestCase):
 
@@ -49,6 +29,7 @@ class PageTest(unittest.TestCase):
     def test_add_paragraph(self):
         self.page.add_paragraph("Lorem ipsum dolor sit amet.")
         self.assertTrue(len(self.page.paragraphs) > 0)
+
 
 class TextRendererTest(unittest.TestCase):
 
@@ -78,6 +59,7 @@ class TextRendererTest(unittest.TestCase):
         output = "".join(self.renderer.file.buffer)
         self.assertRegex(output, r".*END OF TEXT PAGE$")
 
+
 class HtmlWriterTest(unittest.TestCase):
 
     def setUp(self):
@@ -92,7 +74,10 @@ class HtmlWriterTest(unittest.TestCase):
         text = escape("Test Title")
         self.writer.title(text)
         output = "".join(self.writer.file.buffer)
-        self.assertRegex(output, r".*<head>\s*<title>\s*{}\s*</title>\s*</head>".format(text))
+        self.assertRegex(
+            output,
+            r".*<head>\s*<title>\s*{}\s*</title>\s*</head>".format(text)
+        )
 
     def test_start_body(self):
         self.writer.start_body()
@@ -110,10 +95,11 @@ class HtmlWriterTest(unittest.TestCase):
         output = "".join(self.writer.file.buffer)
         self.assertRegex(output, r".*</body>")
 
-    def footer(self):
+    def test_footer(self):
         self.writer.footer()
         output = "".join(self.writer.file.buffer)
         self.assertRegex(output, r".*</html>")
+
 
 class HtmlRendererTest(unittest.TestCase):
 
@@ -143,7 +129,11 @@ class HtmlRendererTest(unittest.TestCase):
         self.renderer.paragraph(p3)
 
         output = "".join(self.mockFile.buffer)
-        self.assertRegex(output, r"<p>\s*{}\s*</p>\s*<p>\s*{}\s*</p>\s*<p>\s*{}\s*</p>".format(p1, p2, p3))
+        self.assertRegex(
+            output,
+            r"<p>\s*{}\s*</p>\s*<p>\s*{}\s*</p>\s*<p>\s*{}\s*</p>"
+            .format(p1, p2, p3)
+        )
 
     def test_footer(self):
         self.renderer.footer()

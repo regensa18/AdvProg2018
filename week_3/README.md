@@ -1,12 +1,10 @@
 Exercise 3: Adapter Pattern
 ===========================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, February 26th 2016*
 
 Your task in this exercise is to complete an implementation of 
 Adapter pattern. You are given a program template that will 
