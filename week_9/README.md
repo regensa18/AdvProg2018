@@ -1,12 +1,10 @@
 Exercise 09: Websocket
 ==========================================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, April 29nd 2016*
 
 Your main tasks in this week exercise is to explore
 available library of websocket in python and learn how it works.

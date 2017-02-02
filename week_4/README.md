@@ -1,12 +1,10 @@
 Exercise 4: Composite & Decorator Pattern
 =========================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, March 4th 2016*
 
 Your task in this exercise is to complete two kinds of Composite 
 pattern implementation and implement two decorators. You are 

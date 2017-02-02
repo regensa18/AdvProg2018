@@ -1,40 +1,79 @@
-Advanced Programming 2016
-=========================
+# CSCM602023 - Advanced Programming (Pemrograman Lanjut)
 
-Welcome to the code repository for Advanced Programming 2016 course. 
-This repository hosts weekly tutorial codes and other, course-related 
+Welcome to the code repository for Advanced Programming 2017 course.
+This repository hosts weekly tutorial codes and other, course-related
 code snippets.
 
-Initial Setup
--------------
+## TL;DR
 
-1. Clone this exercise into your local machine. Git command: 
-`git clone https://gitlab.com/AdvProg2016/weekly-exercises.git <PATH>` 
-E.g. `git clone https://gitlab.com/AdvProg2016/weekly-exercises.git D:\AdvProg2016-exercises` 
-will create a new directory called `AdvProg2016-exercise` in `D:` 
-drive and clone the content of repository into the new directory.
-2. Add new remote called **source** that points to this GitLab 
-repository. Git command: `git remote add source https://gitlab.com/AdvProg2016/weekly-exercises.git`
-3. To pull/update current local copy with latest version from 
-`AdvProg2016/weekly-exercises` repository, use: `git pull source` 
-This repository will contain latest code templates and exercise 
-description files.
-4. Create a new project on GitLab using your own account. Make sure 
-that your project visibility level is set to **Internal** or 
-**Public**.
-5. Inform your GitLab username and project repository name to 
-the teaching team.
+First week of the class:
 
-Submission Guide
-----------------
+1. Fork this repository to your account.
+2. `git clone https://gitlab.com/<YOURNAME>/lab-exercises.git`
+3. `git remote add upstream
+https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
+4. Tell us your GitLab username and URL to your tutorial repository
 
-1. Ensure that the **origin** remote is pointing to your own GitLab 
-project repository. Git command: `git remote set-url origin 
-<URL_TO_REPO>`
-2. Commit your work. Git command: `git commit <FILES_TO_COMMIT> -m 
-"<COMMIT_MESSAGE>"` E.g. `git commit foo.py -m "Initial commit."` or 
-`git commit foo.py bar.py xyz.py -m "Commit 3 files."`
-3. Push your work. For first push attempt, use Git command: `git push 
---set-upstream origin master`. For subsequent pushes, use Git command: 
-`git push`, or more explicitly: `git push origin`
+If there are updates from upstream:
 
+1. `git pull upstream master`
+2. Fix any merge conflict(s) that might arise (hopefully none).
+
+Working on a tutorial problem set:
+
+1. `cd week_n` where **n** is week number folder ID. E.g. **week_2**
+2. `git checkout -b lab-week-n`
+3. Do the exercises as instructed in its README.md file.
+4. Commit your work frequently.
+5. Write good commit message(s)
+6. If your work is ready for grading: `git push -u origin lab-week-n`
+
+## Initial Setup
+
+1. Create a fork of this repository to your GitLab account, which
+will create a copy of this repository under your own account.
+2. Open the forked repository page at
+`https://gitlab.com/<YOURNAME>/lab-exercises` where `<YOURNAME>`
+is your GitLab username.
+3. Set the clone URL to HTTPS and copy the URL into clipboard.
+4. Clone the repository into your local machine. The Git command:
+`git clone https://gitlab.com/<YOURNAME>/lab-exercises.git <PATH>`
+where `<PATH>` is a path to a directory in your local machine.
+5. Go to the directory where the cloned repository is located in your
+local machine.
+6. Add new remote called **upstream** that points to the original
+GitLab repository. The Git command: `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
+7. Tell your TA about your GitLab username and URL to your tutorial
+repository so s/he can grade it later.
+8. Ensure that your repository page has visibility level set to
+**Internal** or **Public**. Check it in **Edit Project** menu at
+your repository page.
+
+## Doing the Tutorial
+
+1. Suppose that you want to work on week 1 problem set. Go to the
+directory that containing week 1 problem, i.e. `week_1`.
+2. To ensure your work regarding week 1 problem is isolated from
+your other attempts at other problems, create a new branch
+specifically for working on week 1 problem. The Git command:
+`git checkout -b lab-week-1`
+3. Read the README file in `week_1` directory. It contains set of
+mandatory and optional tasks that you can work on.
+4. Do the tutorial.
+5. Use `git add` or `git rm` to stage/unstage files that you want to
+save into Git later.
+6. Once you want to save your progress, commit your work to Git. The
+Git command: `git commit` A text editor will apear where you should
+write a commit message. Please try to follow the guidelines written
+in [this guide](http://chris.beams.io/posts/git-commit/) on how to
+write a good commit message.
+7. Repeat steps 4 - 6 until you finished the tutorial.
+8. Once you are ready to submit your work or you want to save it to
+your repository on GitLab, do a Git push. The Git command: 
+`git push -u origin lab-week-1`
+
+## Pulling Updates From Upstream
+
+If there are any updates from upstream, you can get the latest commits
+and integrate it into your fork by using the following Git command:
+`git pull upstream master`

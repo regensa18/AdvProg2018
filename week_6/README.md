@@ -1,12 +1,10 @@
 Exercise 6: Observer & Strategy Pattern
 =======================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, March 18th 2016*
 
 Your main task in this exercise is to complete two modules (`observer.py` & 
 `tabulator.py`) in order to demonstrate a working implementation of Observer 

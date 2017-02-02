@@ -1,12 +1,10 @@
 Exercise 08: Thread-safe queue & concurrent.futures module
 ==========================================================
 
-IKI20810 - Advanced Programming @ Faculty of Computer Science 
-Universitas Indonesia, Even Semester 2015/2016
+CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
+Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
-
-*Friday, April 22nd 2016*
 
 Your main tasks in this week exercise is to fix a multi-threaded program that 
 is using thread-safe queue and complete the implementation of the same program 
