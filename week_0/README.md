@@ -69,7 +69,7 @@ calls.
 Once you have configured your username and email, you may proceed to the
 next tutorial instructions.
 
-1. Create a new file named `README.md` and put your name, NPM, class in
+1. Create a new file named `README.md` and put your name in first line, NPM in second line, class in third line of
 the file.
 2. Run `git status` again. Notice that there is an untracked file. It
 means that there is a file that is not yet tracked by Git.
@@ -140,25 +140,59 @@ so they can monitor your work.
 ## Second Part: Git Branches
 
 TODO Write description and tasks for second part
-- Create branch
-- Work on branch
+- Create Branch
+   When you need to edit something but still unclear whenever it would actually work or not,
+ that's when the branches becomes important to your group-project. If you edit something in your branch,
+ your files on master root still the same as before.
+
+ How to Create Branch:
+ 1. Make sure you are inside the master root:
+ 2. Input this command on your terminal:
+        - git branch <NAME_OF_YOURBRANCH>
+
+ Congratulation, now you already have a branch inside your master root
+
+- Work on Branch
+   Now you already had a branch, this is how you work inside the branch:
+ 1. Make sure you knew the name of your branch
+ 2. Input this command on your terminal:
+      - git checkout <NAME_OF_YOURBRANCH>
+   
 - Simulate merge conflict
+   Now you already worked on your new branch, let us simulate the conflict situation:
+ 1. Add one line below third line with your hobby
+ 2. save README.md
+ 3. git add the README.md
+ 4. git commit the READMe.md
+ 5. git push
+
+ Do you have any problem with the instructions above?
+ if you haven't, do this following:
+ 1. git checkout master
+ 2. open README.md
+ 3. add exact one line below third line with your other hobby (must be different with previous one)
+ 4. save README.md  
+ 5. git merge <NAME_OF_YOURBRANCH>
+
+ There's must be a problem in your git merge, which git will provide some options 
+ to resolve the conflict, choose anything suitable with your merge conflict condition.
+ (In this case you will need to choose what hobby really suitable with you)
 
 * * *
 
-## Mandatory Tasks Checklist
+### Mandatory Tasks Checklist
 
 - [ ] Local Git repository contains at least one commit
 - [ ] Local Git repository is synchronised with GitLab
 - [ ] Able to clone the same Git repository from GitLab to a different
 directory
-- [ ] TODO Mandatory checklist for second part
+- [ ] Local Git repository contains one branch
 
 ## Additional Tasks Checklist
 
 - [ ] Find a public Git repository on GitLab or GitHub and try
 to clone it to local machine
-- [ ] TODO Additional checklist for second part
+- [ ] Able to perform a merge conflict handling
 
 ## Additional Resources
 
@@ -166,4 +200,4 @@ to clone it to local machine
 - [Try Git in your Web browser](https://try.github.io/)
 - [Pro Git e-Book by Scott Chacon & Ben Straub](https://git-scm.com/book/en/v2)
 - [Graph theory](http://think-like-a-git.net/sections/graph-theory.html) and
-[its applications in Git](http://think-like-a-git.net/sections/graphs-and-git.html)
+[ applications in Git](http://think-like-a-git.net/sections/graphs-and-git.html)
