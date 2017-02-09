@@ -1,4 +1,4 @@
-# Exercise 0: Introduction to Git
+a Exercise 0: Introduction to Git
 
 CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
 Computer Science Universitas Indonesia, Even Semester 2016/2017
@@ -148,7 +148,7 @@ TODO Write description and tasks for second part
  How to Create Branch:
  1. Make sure you are inside the master root:
  2. Input this command on your terminal:
-        - git branch <NAME_OF_YOURBRANCH>
+        - git branch `<NAME_OF_YOURBRANCH>`
 
  Congratulation, now you already have a branch inside your master root
 
@@ -156,14 +156,14 @@ TODO Write description and tasks for second part
    Now you already had a branch, this is how you work inside the branch:
  1. Make sure you knew the name of your branch
  2. Input this command on your terminal:
-      - git checkout <NAME_OF_YOURBRANCH>
+      - git checkout `<NAME_OF_YOURBRANCH>`
    
 - Simulate merge conflict
    Now you already worked on your new branch, let us simulate the conflict situation:
  1. Add one line below third line with your hobby
  2. save README.md
  3. git add the README.md
- 4. git commit the READMe.md
+ 4. git commit the README.md
  5. git push
 
  Do you have any problem with the instructions above?
@@ -172,7 +172,7 @@ TODO Write description and tasks for second part
  2. open README.md
  3. add exact one line below third line with your other hobby (must be different with previous one)
  4. save README.md  
- 5. git merge <NAME_OF_YOURBRANCH>
+ 5. git merge `<NAME_OF_YOURBRANCH>`
 
  There's must be a problem in your git merge, which git will provide some options 
  to resolve the conflict, choose anything suitable with your merge conflict condition.
