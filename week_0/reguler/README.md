@@ -37,23 +37,19 @@ garis yang menghubungkan node tersebut merepresentasikan hubungan setiap commit 
 
 Sekian penjelasan singkat dari Git, mari kita langsung mencoba tutorial pengenalan Git ini!
 
-1. Silahkan membuka command-prompt atau shell. Untuk platform Windows, silahkan gunakan `cmd` ataupun `Git Bash`.
+1. Silahkan membuka command-prompt atau shell. Untuk platform Windows, silahkan `Git Bash`.
 Untuk platform Linux atau Mac-OS, kalian bisa langsung menggunakan terminal atau shell favorite kalian.
 2. Silahkan membuat folder dimana akan dipakai sepanjang perkuliahan Advanced Programming dan masuk ke dalam
 folder tesebut.
 
-Hint: Jika memakai command-prompt, bisa memakai perintah `mkdir` <Nama_Folder> dan bisa menggunakan perintah
-`cd`
-
-3. buatlah folder yang akan digunakan untuk menyimpan file yang akan dibuat dalam tutorial ini. 
+    Hint: Jika memakai command-prompt, bisa memakai perintah `mkdir` <Nama_Folder> dan bisa menggunakan perintah
+    `cd`
+3. Buatlah folder yang akan digunakan untuk menyimpan file yang akan dibuat dalam tutorial ini. 
 Tuliskan nama dari folder tersebut sebagai `git-exercises` dan dengan memakai perintah `cd` masuk ke dalam folder tersebut.
-
 4. Di dalam folder tersebut, silahkan eksekusi perintah `git init`. Setelah melakukan eksekusi perintah tersebut, maka 
 akan terdapat Git repository kosong akan dibuat di dalam folder ini
-
 5. Silahkan mencoba perintah `git status`. Dia akan mencetak state dari Git repository tersebut sampai pada saat sebelum 
 melakukan perintah `git status`
-
 
 Selamat! Anda telah membuat Git repository secara lokal di dalam komputer anda. Sebelum kita melanjutkan tutorial ini,
 ada beberapa pengaturan yang harus dilakukan di repository Git lokal di dalam komputer anda.
@@ -63,49 +59,38 @@ repository Git ini. Gunakan perintah ini ketika berada di dalam repository Git:
 `git config user.name "<NAMA_ANDA>"` dan
 `git config user.email <EMAIL_ANDA>`
 
-Contoh: `git config user.name "Muhammad Ardhan Fadhlurrahman"`
-`git config user.email muhammad.ardhan@ui.ac.id`
-
+    Contoh: `git config user.name "Muhammad Ardhan Fadhlurrahman"`
+    `git config user.email muhammad.ardhan@ui.ac.id`
 2. Jika anda menggunakan PC di dalam Lab Fasilkom UI, anda harus melakukan pengaturan HTTP proxy dalam konfigurasi Git tersebut.
 Silahkan mengatur proxy dengan perintah:
 `git config http.proxy 152.118.24.10:8080`
-
 3. Jika anda ingin mengatur konfigurasi git agar konfigurasinya menjadi state 'global', silahkan menambahkan '--global' di dalam
 perintah `git config`, contoh:
 `git config --global user.name "Muhammad Ardhan Fadhlurrahman"`
-
-4. jika ingin mengetahui konfigurasi yang terdapat pada repository git lokal anda, anda bisa melakukan eksekusi perintah:
+4. Jika ingin mengetahui konfigurasi yang terdapat pada repository Git lokal anda, anda bisa melakukan eksekusi perintah:
 `git config --list --local`
 
-
 Setelah melakukan konfigurasi email serta username, silahkan melakukan langkah selanjutnya dalam tutorial ini:
+
 1. Buatlah sebuah file baru bernamakan `README.md` dimana didalamnya terdapat beberapa komponen seperti nama pada baris pertama,
 NPM pada baris kedua, serta kelas pada baris ketiga
-
 2. Jalankan `git status` kembali. Bisa terlihat terdapat untracked file, yang berarti terdapat file yang belum di track oleh Git
-
 3. Tambahkan file tersebut ke dalam Git dengan menggunakan perintah `git add README.md`
-
 4. Jalankan `git status` kembali. Terdapat pesan yang berbeda dengan sebelumnya dimana `README.md` telah masuk ke dalam
 `Changes to be commited`. Pesan tersebut memiliki arti bahwa `README.md` akan di track oleh Git pada commit berikutnya.
-
 5. Pada saat ini, `README.md` belum di track oleh Git walaupun anda telah mengeksekusi perintah `git add README.md`. perintah
 `git add` hanya memberitahukan Git untuk melakukan perubahan pada state setelah di commit
-
 6. Untuk melakukan penggantian secara permanen, silahkan melakukan commit dengan mengeksekusi perintah `git commit`. Teks editor
 akan muncul dimana anda harus menuliskan pesan yang mendeskripsikan perubahan yang terjadi sampai dengan anda melakukan commit.
 
-7. Cara menggunakan Vim: `h j k l` untuk memindahkan cursor. `i` untuk masuk ke dalam INSERT MODE, atau state dimana anda 
-bisa melakukan penambahan, pengurangan, atau modifikasi terhadap file tersebut. `escape` untuk kembali ke COMMAND MODE, atau state
-dimana anda bisa memasukan perintah dasar vim. `:w` di dalam COMMND MODE untuk menyimpan/write file yang tulis pada content buffer
-ke dalam output stream, `:q` dalam COMMAND MODE untuk keluar dari Vim
+    Cara menggunakan Vim: `h j k l` untuk memindahkan cursor. `i` untuk masuk ke dalam INSERT MODE, atau state dimana anda 
+    bisa melakukan penambahan, pengurangan, atau modifikasi terhadap file tersebut. `escape` untuk kembali ke COMMAND MODE, atau state
+    dimana anda bisa memasukan perintah dasar vim. `:w` di dalam COMMND MODE untuk menyimpan/write file yang tulis pada content buffer
+    ke dalam output stream, `:q` dalam COMMAND MODE untuk keluar dari Vim
 
-Hint: anda bisa langsung mengetik `:wq` untuk write and quit pada satu komentar bersamaan.
-
-8. Setelah memasukan pesan dalam commit tersebut, perubahan akan terjadi dan tersimpan di dalam Git
-
-9. Anda telah selesai melakukan commit
-
+    Hint: Anda bisa langsung mengetik `:wq` untuk write and quit pada satu komentar bersamaan.
+7. Setelah memasukan pesan dalam commit tersebut, perubahan akan terjadi dan tersimpan di dalam Git
+8. Anda telah selesai melakukan commit
 
 Anda telah membuat suatu repository Git dan sudah melakukan tracking terhadap perubahan yang terjadi pada file di dalam repository.
 Repository yang telah dibuat pada langkah sebelumnya, hanya tersimpan pada komputer atau perangkat yang sekarang anda gunakan. Jika
@@ -114,41 +99,32 @@ melalui Web. Untuk melakukan hal tersebut, anda harus menduplikasikan repository
 online service bernama Gitlab.
 
 1. Silahkan mengakses Gitlab.com dengan menggunakan browser sesuai dengan yang anda sukai.
-
 2. Jika sudah mendaftar, gunakan akun Gitlab yang anda punya. Jika belum mempunyai akun tersebut, silahkan membuat akun baru.
-
 3. Silahkan membuat repository baru bernama **my-first-git-repo** di dalam Gitlab dan silahkan masuk ke dalam halaman repository tersebut.
 Pastikan anda melakukan pengaturan terlebih dahulu agar visibilitynya menjadi public.
-
 4. Temukan bagian bernama `clone URL` di dalam halaman tersebut. Perhatikan terdapat dua jenis URL: HTTPS dan SSH, kita akan menggunakan
 HTTPS URL. Silahka catat HTTPS URL tersebut ke dalam catatan anda.
-
 5. Anda akan melakukan update terhadap repository Git yang terdapat pada komputer anda maka commit yang anda lakukan sebelumnya dapat 
 disimpan dalam Gitlab. Silahkan melakukan eksekusi perintah `git remote add origin <URL>` dimana `<URL>` tersebut merupakan HTTPS URL
 di dalam Gitlab repository anda. Contoh:
 `git remote add origin https://gitlab.com/JohnDoe/my-first-git-repo.git`
 
-`git remote` akan menambahkan PATH pada repository lokal yang ada di komputer anda saat ini kepada repository online yang terdapat di GitLab.
-PATH tersebut akan diidentifikasi dengan nama `origin`. Dengan mempunyai PATH ini, anda dapat menyimpan commit yang anda lakukan ke dalam
-repository online anda.
-
+    `git remote` akan menambahkan PATH pada repository lokal yang ada di komputer anda saat ini kepada repository online yang terdapat di GitLab.
+    PATH tersebut akan diidentifikasi dengan nama `origin`. Dengan mempunyai PATH ini, anda dapat menyimpan commit yang anda lakukan ke dalam
+    repository online anda.
 6. Untuk menyimpan commit yang anda lakukan ke dalam repository online GitLab anda, silahkan mengeksekusi perintah `git push -u origin master`.
 `git push -u` memberitahukan kepada Git untuk mengintegrasikan atau dalam terminologi Git adalah push, melakukan push dari commit yang anda
 lakukan sebelumnya pada repository lokal anda. `origin` telah dijelaskan sebelumnya, dan `master` dimaksudkan untuk disimpan pada 
 cabang `master`.
-
 7. Silahkan melihat repository GitLab anda. Anda akan melihat file yang ada buat sudah bisa di akses melalui GitLab.
-
 
 Anda juga dapat melakukan duplikasi terhadap repository online yang terdapat pada GitLab ke dalam komputer anda. Mari mencoba untuk
 melakukan duplikasi terhadap repository GitLab online anda ke dalam folder lain di dalam komputer anda, dengan langkah berikut:
-
 1. Silahkan masuk ke dalam halaman repository yang terdapat pada GitLab
 2. Silahkan mencatat HTTPS clone URL yang terdapat pada repository tersebut.
 3. Kembali ke command-prompt atau shell anda. silahkan membuat direktori seperti langkah awal tutorial ini
 4. Silahkan eksekusi perintah berikut: `git clone <URL>` dimana `<URL>` nya adalah clone URL.
 5. Silahkan mengecek dan melakukan validasi folder yang telah anda clone.
-
 
 Ini merupakan akhir dari bagian pertama dari tutorial hari ini. Jangan lupa untuk menginformasikan GitLab username kepada tim pengajar
 sehingga mereka dapat memantau pekerjaan anda dalam satu semester ini.
@@ -159,41 +135,24 @@ Ketika anda ingin melakukan modifikasi tetapi tidak ingin mengubah file yang and
 dapat membuat branch dengan cara seperti berikut:
 
 1. Pastikan anda berada di dalam direktori/folder Git dengan cabang `master`
-
 2. Silahkan eksekusi perintah `git branch <NAMA_CABANG>`, contohnya:
 `git branch cool-feature`
-
-
 3. Silahkan mengakses cabang tersebut dengan perintah:
 `git checkout <NAMA_CABANG>`
 
+    Langkah ke 2 dan 3 bisa dipersingkat menjadi satu perintah seperti `git checkout -b <NAMA_CABANG>`
 
-Langkah ke 2 dan 3 bisa dipersingkat menjadi satu perintah seperti `git checkout -b <NAMA_CABANG>`
-
-
-Selamat! anda telah masuk ke dalam cabang yang anda buat
-
-
-Sekarang kita akan melakukan simulasi merge conflict pada dua branch:
+Selamat! anda telah masuk ke dalam cabang yang anda buat. Sekarang kita akan melakukan simulasi merge conflict pada dua branch:
 
 1. Silahkan membuka file `README.md` pada branch yang telah anda buat
-
 2. Tambahkan baris keempat dengan hobi anda
-
 3. Simpan `README.md` 
-
-4. silahkan melakukan perintah `git add`
-
-5. silahkan melakukan perintah `git commit`
-
-6. silahkan pindah ke branch `master` dengan perintah `git checkout master`
-
-7. Silahkan membuka file `README.md` pada branch 'master`
-
+4. Silahkan melakukan perintah `git add`
+5. Silahkan melakukan perintah `git commit`
+6. Silahkan pindah ke branch `master` dengan perintah `git checkout master`
+7. Silahkan membuka file `README.md` pada branch `master`
 8. Tambahkan di baris keempat dengan hobi anda yang lain (tidak boleh sama)
-
 9. Simpan `README.md`
-
 10. Silahkan melakukan eksekusi perintah `git merge <NAMA_CABANG>`
 
 Akan terdapat masalah pada git merge tersebut, Git secara otomatis akan memberikan solusi secara default yang bisa kalian
@@ -234,5 +193,5 @@ lokal
 - [Git Tutorials & Training by Atlassian](https://www.atlassian.com/git/tutorials)
 - [Try Git in your Web browser](https://try.github.io/)
 - [Pro Git e-book by Scott Chacon & Ben Straub](https://git-scm.com/book/en/v2)
-- [Graph theory](http://think-like-a-git.net/sections/graph-theory.html) and
+- [Graph theory](http://think-like-a-git.net/sections/graph-theory.html)
 - [Graph and Application in Git](http://think-like-a-git.net/sections/graphs-and-git.html)
