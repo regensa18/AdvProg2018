@@ -1,4 +1,4 @@
-a Exercise 0: Introduction to Git
+# Exercise 0: Introduction to Git
 
 CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
 Computer Science Universitas Indonesia, Even Semester 2016/2017
@@ -164,6 +164,7 @@ The branch name in bold text is the current branch you are working on.
 
 Now you are working on your new branch, let's try to simulate concurrent working
 on the same project:
+
 1. Open the README.md file.
 2. Create one new line below the third line. Write your hobby in that line.
 3. Save the README.md file.
@@ -175,6 +176,7 @@ and write a commit message.
 
 Do you have any problem with the instructions above? If you don't, do
 the following:
+
 1. Work on the `master` branch. Use the command `git checkout master`
 to switch back to `master` branch.
 2. Open the README.md file.
