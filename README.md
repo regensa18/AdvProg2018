@@ -10,8 +10,7 @@ First week of the class:
 
 1. Fork this repository to your account.
 2. `git clone https://gitlab.com/<YOURNAME>/lab-exercises.git`
-3. `git remote add upstream
-https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
+3. `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
 4. Tell us your GitLab username and URL to your tutorial repository
 
 If there are updates from upstream:
@@ -27,6 +26,9 @@ Working on a tutorial problem set:
 4. Commit your work frequently.
 5. Write good commit message(s)
 6. If your work is ready for grading: `git push -u origin lab-week-n`
+
+If you want to know the detailed explanation about each instructions above,
+please read the following sections.
 
 ## Initial Setup
 
