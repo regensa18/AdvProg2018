@@ -4,26 +4,48 @@ Welcome to the code repository for Advanced Programming 2017 course.
 This repository hosts weekly tutorial codes and other, course-related
 code snippets.
 
+## Table of Contents
+
+1. Weekly Exercises
+    1. Exercise 0 - Introduction to Git
+        - [International class](week_0_ki/README.md)
+        - [Regular class](week_0_reg/README.md)
+    2. [Exercise 1 - Abstract Factory & Builder](week_1/README.md)
+    3. [Exercise 2 - TBA](/#)
+    4. [Exercise 3 - TBA](/#)
+    5. [Exercise 4 - TBA](/#)
+    6. [Exercise 5 - TBA](/#)
+    7. [Exercise 6 - TBA](/#)
+    8. [Exercise 7 - TBA](/#)
+    9. [Exercise 8 - TBA](/#)
+    10. [Exercise 9 - TBA](/#)
+    10. [Exercise 10 - TBA](/#)
+2. [Quickstart Guide](/#tldr)
+3. [Initial Setup](/#initial-setup)
+4. [Doing the Tutorial](/#doing-the-tutorial)
+5. [Pulling Updates From Upstream](/#pulling-updates-from-upstream)
+
 ## TL;DR
 
 First week of the class:
 
-1. Fork this repository to your account.
+1. Fork this repository to your account
 2. `git clone https://gitlab.com/<YOURNAME>/lab-exercises.git`
-3. `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
-4. Tell us your GitLab username and URL to your tutorial repository
+3. Change direcotry to the recently cloned directory, i.e. `cd lab-exercises`
+4. `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
+5. Tell us your GitLab username and URL to your tutorial repository
 
 If there are updates from upstream:
 
 1. `git pull upstream master`
-2. Fix any merge conflict(s) that might arise (hopefully none).
+2. Fix any merge conflict(s) that might arise (hopefully none)
 
 Working on a tutorial problem set:
 
 1. `cd week_n` where **n** is week number folder ID. E.g. **week_2**
 2. `git checkout -b lab-week-n`
-3. Do the exercises as instructed in its README.md file.
-4. Commit your work frequently.
+3. Do the exercises as instructed in its README.md file
+4. Commit your work frequently
 5. Write good commit message(s)
 6. If your work is ready for grading: `git push -u origin lab-week-n`
 
