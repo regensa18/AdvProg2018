@@ -1,4 +1,4 @@
-#	Mandatory 6: Create a program so it implement Factory Method Pattern. Di bawah merupakan class template yang bisa kalian gunakan. Kalian dibebaskan untuk memakai class seperti apa. 
+#	Mandatory 3: Create a program so it implement Factory Method Pattern. There are a template class to use Factory Method Pattern but you are free to explore your idea in implementing Factory Method Pattern.
 
 def main():
 	board = Board3x3()
