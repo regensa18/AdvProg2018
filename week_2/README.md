@@ -210,7 +210,7 @@ This has an identical effect as SingletonPattern.py does, but it’s more elegant.
 
 ## Additional Checklist
 
-- [ ] Create `Tutorial2-FM-Basic.py` to have a Board with nxn size. Then, revised the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
+- [ ] Update `Tutorial2-FM.py` to have a Board with nxn size. Then, revised the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
     - [ ] Save your work in `Tutorial2-FM-Dynamic.py`
 	- [ ] Commit with a representative comment
 - [ ] Write a brief explanation about the difference between `gameboard1.py`, `gameboard2.py`, `gameboard3.py`, and `gameboard4.py`. Write it in `factoryMethodPattern.txt`

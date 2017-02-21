@@ -31,15 +31,15 @@ class Board3x3(AbstractBoard):
 				if (column % 2): self.board[row][column] = "o"
 				else: self.board[row][column] = "x"
 
-# Mandatory 6: Uncomment the codes below
+# Mandatory 3: Uncomment the codes below
 # class Piece(str):
 	# __slots__ = ()
 	
 # class Circle(Piece):
-# Mandatory 6: Implement the Factory Method in here
+# Mandatory 3: Implement the Factory Method in here
 
 # class Cross(Piece):
-# Mandatory 6: Implement the Factory Method in here
+# Mandatory 3: Implement the Factory Method in here
 
 if __name__ == "__main__":
     main()
