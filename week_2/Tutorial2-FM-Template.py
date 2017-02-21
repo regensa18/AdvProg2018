@@ -36,10 +36,10 @@ class Board3x3(AbstractBoard):
 	# __slots__ = ()
 	
 # class Circle(Piece):
-# Mandatory 6: Implement the Factory class in here
+# Mandatory 6: Implement the Factory Method in here
 
 # class Cross(Piece):
-# Mandatory 6: Implement the Factory class in here
+# Mandatory 6: Implement the Factory Method in here
 
 if __name__ == "__main__":
     main()
