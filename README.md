@@ -11,7 +11,7 @@ code snippets.
         - [International class](week_0_ki/README.md)
         - [Regular class](week_0_reg/README.md)
     2. [Exercise 1 - Abstract Factory & Builder](week_1/README.md)
-    3. [Exercise 2 - TBA](/#)
+    3. [Exercise 2 - Factory Method & Singleton](week_2/README.md)
     4. [Exercise 3 - TBA](/#)
     5. [Exercise 4 - TBA](/#)
     6. [Exercise 5 - TBA](/#)
