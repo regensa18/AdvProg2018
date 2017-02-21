@@ -232,9 +232,6 @@ through inheritance.
 	- [ ] Commit with a representative comment
 - [ ] Write a brief explanation about the difference between `gameboard1.py`, `gameboard2.py`, `gameboard3.py`, and `gameboard4.py`. Write it in `factoryMethodPattern.txt`
 	- [ ] Commit with a representative comment
-- [ ] Refactor `BorgSingleton.py` using __new__ method (the same technique as NewSingleton.py)
-	- [ ] Save your work in `NewBorg.py`
-	- [ ] Commit with a representative comment
 	
 ## References
 
