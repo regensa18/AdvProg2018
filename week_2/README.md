@@ -17,11 +17,15 @@ function.
 ## Exercises
 
 The Singleton Pattern is used when we need a class that has only a single
-instance that is the one and only instance accessed throughout the program. For example, when we want to create a program that set 'rates' we understand that 'rates' only binds into one object. Because of that using singleton pattern would be the right way in creating the object.
+instance that is the one and only instance accessed throughout the program.
+For example, when we want to create a program that set 'rates' we understand
+that 'rates' only binds into one object. Because of that using singleton
+pattern would be the right way in creating the object.
 
-Let us study how to make a singleton pattern. Make a program like this and save it within `SingletonPattern.py`:
+Let us study how to make a singleton pattern. Make a program like this and
+save it within `SingletonPattern.py`:
 
-``` python
+```python
 class OnlyOne:
     class __OnlyOne:
         def __init__(self, arg):
@@ -38,9 +42,11 @@ class OnlyOne:
         return getattr(self.instance, name)
 ```
 
-Please take look at the program, the first time you create an OnlyOne, it initializes instance, but after that it just ignores you. Add the codes below to the current program:
+Please take look at the program. The first time you create an OnlyOne,
+it initializes instance, but after that it just ignores you. Add the
+codes below to the current program:
 
-``` python
+```python
 x = OnlyOne('sausage')
 print(x)
 print(x.instance)
@@ -65,7 +71,7 @@ print(y.instance)
 print()
 ```
 
-Execute the program and the program should have an output like this:
+Execute the program and the program should produce an output like this:
 
 ``` 
 inisiasi sebuah instance
@@ -95,7 +101,7 @@ Note that the above approach doesn’t restrict you to creating only one object. T
 
 A variation on this technique uses the class method __new__ added in Python 2.2, write it in `NewSingleton.py`:
 
-``` python
+```python
 class OnlyOne(object):
     class __OnlyOne:
         def __init__(self):
@@ -125,7 +131,7 @@ print(x)
 print(y)
 ```
 
-Execute the program and it should have an output like this:
+Execute the program and it should produce an output like this:
 
 ```
 <__main__.OnlyOne.__OnlyOne object at 0x0290B510>sausage
@@ -135,9 +141,18 @@ Execute the program and it should have an output like this:
 <__main__.OnlyOne.__OnlyOne object at 0x0290B510>spam
 ```
 
-One more technique that you could use to create Singleton pattern is a technique that Alex Martelli created, Borg. The name Borg was taken from Star Trek:The Next Generation character, he was famous for his quotes "We are all one". Because of that, Borg was taken to represent Singleton pattern technique. Borg is accomplished by setting all the `__dict__` to the same static piece of storage. With this could create as many object as you want as long as they refer to one information state. The fundamental differences between Singleton and Borg, Borg is a pool of objects referring to a shared state and Singleton is just one object. How to create Borg will be like this, write it in `BorgSingleton.py`:
+One more technique that you can use to implement Singleton pattern is a
+technique that Alex Martelli created: **Borg**. The name Borg was taken
+from Star Trek: The Next Generation character that was famous for his
+quotes "We are all one". Because of that, Borg was taken to represent
+Singleton pattern technique. Borg is accomplished by setting all the
+`__dict__` to the same static piece of storage, thus making instances
+of Borg share the same information state. The fundamental differences
+between Singleton and Borg: Borg is a pool of objects referring to a
+shared state and Singleton is just one object. How to create Borg
+will be like this, write it in `BorgSingleton.py`:
 
-``` python
+```python
 class Borg:
     _shared_state = {}
     def __init__(self):
@@ -161,7 +176,7 @@ print(repr(y))
 print(repr(z))
 ```
 
-Execute the program and it should have an output like this:
+Execute the program and it should produce an output like this:
 
 ```
 sausage
@@ -174,29 +189,33 @@ spam
 <__main__.Singleton object at 0x027F2A10>
 ```
 
-This has an identical effect as SingletonPattern.py does, but it’s more elegant. In the former case, you must wire in Singleton behavior to each of your classes, but Borg is designed to be easily reused through inheritance.
+This has an identical effect as `SingletonPattern.py` does, but it is
+more elegant. In the former case, you must wire in Singleton behavior
+to each of your classes, but Borg is designed to be easily reused
+through inheritance.
 
 
 ## Mandatory Checklist
 
 - [ ] Put your work in separate branch named `lab-week-2`
     - Hint: `git checkout -b lab-week-2`
-- [ ] Create folder named `factory-method-pattern`. Save all the file from mandatory checklist number 3 and additional checklist number 1-2 in this folder.
+- [ ] Create folder named `factory-method-pattern` 
+    - Save all the file from mandatory checklist number 3 and additional checklist number 1-2 in this folder
 	- Hint: `mkdir factory-method-pattern`
-- [ ] From `Tutorial2-FM-Template.py` refactor the program by using factory method pattern. Ensures the program has the same output.
+- [ ] From `Tutorial2-FM-Template.py` refactor the program by using factory method pattern. Ensures the program has the same output
 	- [ ] Save it in `Tutorial2-FM.py`
 	- [ ] Commit with a representative comment
-- [ ] Create folder named `singleton-pattern`. Save all the file from mandatory checklist number 5-10 and additional checklist number 3 in this folder.
+- [ ] Create folder named `singleton-pattern`. Save all the file from mandatory checklist number 5-10 and additional checklist number 3 in this folder
 	- Hint: `mkdir singleton-pattern`
-- [ ] Create `SingletonPattern.py` based on the exercises. Ensures that the output is not much different from the output in file exercises.
+- [ ] Create `SingletonPattern.py` based on the exercises. Ensures that the output is not much different from the output in file exercises
     - [ ] Commit with a representative comment
-- [ ] Create `NewSingleton.py` based on the exercises. Ensures that the output is not much different from the output in file exercises.
+- [ ] Create `NewSingleton.py` based on the exercises. Ensures that the output is not much different from the output in file exercises
     - [ ] Commit with a representative comment
-- [ ] Create `BorgSingleton.py` based on the exercises. Ensures that the output is not much different from the output in file exercises.
+- [ ] Create `BorgSingleton.py` based on the exercises. Ensures that the output is not much different from the output in file exercises
     - [ ] Commit with a representative comment
-- [ ] Explain the difference between `SingletonPattern.py` and `NewSingleton.py`. Write it on a file named `SingletonVsNewSingleton.txt`.
+- [ ] Explain the difference between `SingletonPattern.py` and `NewSingleton.py`. Write it on a file named `SingletonVsNewSingleton.txt`
 	- [ ] Commit with a representative comment
-- [ ] From `Tutorial2-S.py` create IdnCurrRates to become a Singleton with using the same technique as `NewSingleton.py`.
+- [ ] From `Tutorial2-S.py` create IdnCurrRates to become a Singleton with using the same technique as `NewSingleton.py`
 	- [ ] Save your work in `Tutorial2Singleton.py`
 	- [ ] Commit with a representative comment
 - [ ] From `Tutorial2-S.py` use class Borg for the Singleton pattern. (Don't continue from mandatory checklist No.12, edit from a brand new `Tutorial2-S.py`)
@@ -210,12 +229,12 @@ This has an identical effect as SingletonPattern.py does, but it’s more elegant.
 
 ## Additional Checklist
 
-- [ ] Create `Tutorial2-FM-Basic.py` to have a Board with nxn size. Then, revised the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
+- [ ] Create `Tutorial2-FM-Basic.py` to have a Board with `n` x `n` size. Then, revise the output so it could have `xoxoxo...` pattern on the odd lines and `uvuvuv...` on the even lines
     - [ ] Save your work in `Tutorial2-FM-Dynamic.py`
 	- [ ] Commit with a representative comment
 - [ ] Write a brief explanation about the difference between `gameboard1.py`, `gameboard2.py`, `gameboard3.py`, and `gameboard4.py`. Write it in `factoryMethodPattern.txt`
 	- [ ] Commit with a representative comment
-- [ ] Refactor `BorgSingleton.py` using __new__ method (the same technique as NewSingleton.py.
+- [ ] Refactor `BorgSingleton.py` using __new__ method (the same technique as NewSingleton.py)
 	- [ ] Save your work in `NewBorg.py`
 	- [ ] Commit with a representative comment
 	
