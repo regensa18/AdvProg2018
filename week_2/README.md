@@ -209,16 +209,10 @@ through inheritance.
     - [ ] Commit with a representative comment
 - [ ] Create `NewSingleton.py` based on the exercises. Ensure that the output is not very different from the output in file exercises
     - [ ] Commit with a representative comment
-- [ ] Create `BorgSingleton.py` based on the exercises. Ensure that the output is not very different from the output in file exercises
-    - [ ] Commit with a representative comment
 - [ ] Explain the difference between `SingletonPattern.py` and `NewSingleton.py`. Write it on a file named `SingletonVsNewSingleton.txt`
 	- [ ] Commit with a representative comment
-- [ ] From `Tutorial2-S.py` modify IdnCurrRates to become a Singleton by using the same technique as `NewSingleton.py`
+- [ ] From `Tutorial2-S.py`, modify `IdnCurrRates` to become a Singleton by using the same technique as `NewSingleton.py`
 	- [ ] Save your work in `Tutorial2Singleton.py`
-	- [ ] Commit with a representative comment
-- [ ] From `Tutorial2-S.py` use class Borg for the Singleton pattern. (Don't continue from mandatory checklist No.12, edit from a brand new `Tutorial2-S.py`)
-	- [ ] Create a new class named `SgprCurrRates`
-	- [ ] Uncomment codes for Mandatory Checklist no.13
 	- [ ] Commit with a representative comment
 - [ ] Push your work to your GitLab repository
     - Hint: `git push -u origin lab-week-2`
@@ -227,7 +221,7 @@ through inheritance.
 
 ## Additional Checklist
 
-- [ ] Modify `Tutorial2-FM-Basic.py` to have a Board with nxn size. Then, revise the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines
+- [ ] Update `Tutorial2-FM.py` to have a Board with nxn size. Then, revise the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
     - [ ] Save your work in `Tutorial2-FM-Dynamic.py`
 	- [ ] Commit with a representative comment
 - [ ] Write a brief explanation about the difference between `gameboard1.py`, `gameboard2.py`, `gameboard3.py`, and `gameboard4.py`. Write it in `factoryMethodPattern.txt`
