@@ -211,7 +211,7 @@ through inheritance.
     - [ ] Commit with a representative comment
 - [ ] Explain the difference between `SingletonPattern.py` and `NewSingleton.py`. Write it on a file named `SingletonVsNewSingleton.txt`
 	- [ ] Commit with a representative comment
-- [ ] From `Tutorial2-S.py` modify IdnCurrRates to become a Singleton by using the same technique as `NewSingleton.py`
+- [ ] From `Tutorial2-S.py`, modify `IdnCurrRates` to become a Singleton by using the same technique as `NewSingleton.py`
 	- [ ] Save your work in `Tutorial2Singleton.py`
 	- [ ] Commit with a representative comment
 - [ ] Push your work to your GitLab repository
@@ -221,7 +221,7 @@ through inheritance.
 
 ## Additional Checklist
 
-- [ ] Update `Tutorial2-FM.py` to have a Board with nxn size. Then, revised the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
+- [ ] Update `Tutorial2-FM.py` to have a Board with nxn size. Then, revise the output so it could have "xoxoxo..." pattern on the odd lines and it could have "uvuvuv..." on the even lines.
     - [ ] Save your work in `Tutorial2-FM-Dynamic.py`
 	- [ ] Commit with a representative comment
 - [ ] Write a brief explanation about the difference between `gameboard1.py`, `gameboard2.py`, `gameboard3.py`, and `gameboard4.py`. Write it in `factoryMethodPattern.txt`
