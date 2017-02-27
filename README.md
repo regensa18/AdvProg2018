@@ -101,3 +101,25 @@ your repository on GitLab, do a Git push. The Git command:
 If there are any updates from upstream, you can get the latest commits
 and integrate it into your fork by using the following Git command:
 `git pull upstream master`
+
+## Tutorial Demonstration Mechanism
+
+This demonstration mechanism applies for both students in Regular and
+International classes:
+
+1. Demonstrations should be done at most in the end of Friday of the
+lab session week. The time allocation for the demonstration can be
+adjusted to the availability of the Teaching Assistants. As long as
+the demonstration is still done in Friday, students have the chance
+to achieve maximum score for the tutorial.
+
+2. If the demonstration is done after Friday and before the following
+Tuesday, then the maximum score the student can get for that tutorial
+is C, equivalent with attending the Lab session and only doing the
+mandatory tasks.
+
+3. Demonstrations will be done with the last commit made by the
+student before 12:00 AM of Friday in the same week of the Lab session.
+In other words, students can still work on the tutorial and push their
+commits until Thursday 23:59 PM.
+
