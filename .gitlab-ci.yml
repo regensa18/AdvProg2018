@@ -1,30 +1,36 @@
 image: python:3.5
 
+before_script:
+  - pip install -r requirements.txt
+
 grade_week_1_mandatory:
+  stage: test
   script:
     - cd week_1
     - python form_m1.py
     - python form_m2.py
     - python form_m3.py
   only:
-    - /^lab-.*-1$/
+    - /^lab-.*1$/
   except:
     - master
     - branches@CSUI-AdvProg-2017/lab-exercises
   allow_failure: false
 
 grade_week_1_additional:
+  stage: test
   script:
     - cd week_1
     - python form_a1.py
   only:
-    - /^lab-.*-1$/
+    - /^lab-.*1$/
   except:
     - master
     - branches@CSUI-AdvProg-2017/lab-exercises
   allow_failure: true
 
 grade_week_2_mandatory:
+  stage: test
   script:
     - cd week_2/factory-method-pattern
     - python Tutorial2-FM.py
@@ -34,19 +40,54 @@ grade_week_2_mandatory:
     - cat SingletonVsNewSingleton.txt
     - python Tutorial2Singleton.py
   only:
-    - /^lab-.*-2$/
+    - /^lab-.*2$/
   except:
     - master
     - branches@CSUI-AdvProg-2017/lab-exercises
   allow_failure: false
 
 grade_week_2_additional:
+  stage: test
   script:
     - cd week_2/factory-method-pattern
     - python Tutorial2-FM-Dynamic.py
     - cat factoryMethodPattern.txt
   only:
-    - /^lab-.*-2$/
+    - /^lab-.*2$/
+  except:
+    - master
+    - branches@CSUI-AdvProg-2017/lab-exercises
+  allow_failure: true
+
+prep_week_3:
+  stage: build
+  script:
+    - python -m flake8 --ignore=F821 week-3
+  only:
+    - /week-3$/@CSUI-AdvProg-2017/lab-exercises
+
+grade_week_3_mandatory:
+  stage: test
+  script:
+    - cd week_3
+    - python m1adapter.py
+    - cat m2adapter.txt
+    - python m1bridge.py
+    - cat m2bridge.txt
+  only:
+    - /^lab-.*3$/
+  except:
+    - master
+    - branches@CSUI-AdvProg-2017/lab-exercises
+  allow_failure: false
+
+grade_week_3_additional:
+  stage: test
+  script:
+    - cd week_3
+    - python a1bridge.py
+  only:
+    - /^lab-.*3$/
   except:
     - master
     - branches@CSUI-AdvProg-2017/lab-exercises
