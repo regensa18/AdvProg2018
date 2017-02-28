@@ -49,20 +49,18 @@ you have to implement Bridge pattern in this exercise.
 ## Bridge Pattern
 
 1. [ ] Implement Bridge pattern in a Python module named `a1bridge.py`
-based on the diagram and description given in the
-[Additional Checklist](/#additional-checklist)
+based on the diagram and description given in the Additional Checklist
 
 ## Rules
 
-Several rules that must be observed when doing the 
-[Additional Checklist](/#additional-checklist):
+Several rules that must be observed when doing the Additional Checklist:
 
 - You must not modify `main()` function
 - `AnotherFunctionality()` only return the class name
 - `SomeFunctionality()` print the class name + "$$$$$$" name
     - Please refer to the hint in the [usecase.py](usecase.py) for
     this point
-- Use `circle.py` as the reference
+- Use `m1bridge.py` as the reference
 
 ## Additional Resources
 
