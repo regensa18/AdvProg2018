@@ -55,8 +55,10 @@ based on the diagram and description given in the Additional Checklist
 
 Several rules that must be observed when doing the Additional Checklist:
 
+- Copy `main()` from usecase.py to `a1bridge.py`
 - You must not modify `main()` function
 - `AnotherFunctionality()` only return the class name
+- `SomeFunctionality` use `AnotherFunctionality`
 - `SomeFunctionality()` print the class name + "$$$$$$" name
     - Please refer to the hint in the [usecase.py](usecase.py) for
     this point
