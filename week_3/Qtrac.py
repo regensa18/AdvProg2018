@@ -16,6 +16,7 @@ import functools
 import os
 import sys
 
+
 def coroutine(function):
     @functools.wraps(function)
     def wrapper(*args, **kwargs):
@@ -37,7 +38,7 @@ else:
         try:
             os.remove(filename)
         except FileNotFoundError:
-            pass # All other exceptions are passed to the caller
+            pass  # All other exceptions are passed to the caller
 
 
 # Thanks to Nick Coghlan for these!
@@ -47,7 +48,8 @@ if sys.version_info[:2] >= (3, 3):
             def __subclasshook__(Class, Subclass):
                 if Class is Base:
                     attributes = collections.ChainMap(*(Superclass.__dict__
-                            for Superclass in Subclass.__mro__))
+                                                      for Superclass
+                                                      in Subclass.__mro__))
                     if all(method in attributes for method in methods):
                         return True
                 return NotImplemented
@@ -84,7 +86,8 @@ class Requirer(metaclass=abc.ABCMeta):
             if hasattr(Superclass, "required_methods"):
                 methods |= set(Superclass.required_methods)
         attributes = collections.ChainMap(*(Superclass.__dict__
-                for Superclass in Class.__mro__))
+                                          for Superclass
+                                          in Class.__mro__))
         if all(method in attributes for method in methods):
             return True
         return NotImplemented

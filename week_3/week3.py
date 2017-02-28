@@ -10,8 +10,9 @@
 # General Public License for more details.
 
 # This program has been modified from its original source
-# (renderer2.py) to fit in Advanced Programming 2016 week 3 exercise.
+# (renderer2.py) to fit in Advanced Programming 2017 week 3 exercise.
 
+import Qtrac
 import abc
 import sys
 import textwrap
@@ -19,7 +20,6 @@ if sys.version_info[:2] < (3, 2):
     from xml.sax.saxutils import escape
 else:
     from html import escape
-import Qtrac
 
 
 @Qtrac.has_methods("header", "paragraph", "footer")
@@ -34,7 +34,7 @@ the simple {} class."""
 def main():
     paragraph1 = MESSAGE.format("plain-text", "TextRenderer")
     paragraph2 = """This is another short paragraph just so that we can
-see two paragraphs in action."""
+    see two paragraphs in action."""
     title = "Plain Text"
     textPage = Page(title, TextRenderer(22))
     textPage.add_paragraph(paragraph1)
@@ -53,7 +53,7 @@ see two paragraphs in action."""
 
     paragraph1 = MESSAGE.format("Markdown", "MarkdownRenderer")
     paragraph2 = """This is another short paragraph just so that we can
-see two paragraphs in action."""
+    see two paragraphs in action."""
     title = "Markdown"
     markdownPage = Page(title, MarkdownRenderer(MarkdownWriter(sys.stdout)))
     markdownPage.add_paragraph(paragraph1)
@@ -64,7 +64,7 @@ see two paragraphs in action."""
 
     paragraph1 = MESSAGE.format("Restructured", "reSTRenderer")
     paragraph2 = """This is another short paragraph just so that we can
-see two paragraphs in action."""
+    see two paragraphs in action."""
     title = "Restructured"
     reSTPage = Page(title, reSTRenderer(reSTWriter(sys.stdout)))
     reSTPage.add_paragraph(paragraph1)
@@ -86,20 +86,20 @@ class Page:
     def __init__(self, title, renderer):
         if not isinstance(renderer, Renderer):
             raise TypeError("Expected object of type Renderer, got {}".
-                    format(type(renderer).__name__))
+                            format(type(renderer).__name__))
         self.title = title
         self.renderer = renderer
         self.paragraphs = []
 
-
     def add_paragraph(self, paragraph):
         """
-        Adds a new paragraph into its respective collection. The 
-        collection (i.e. list of `paragraphs`) contains all paragraphs 
+        Adds a new paragraph into its respective collection. The
+        collection (i.e. list of `paragraphs`) contains all paragraphs
         that will be written into the page.
         """
         # TODO Implement me!
-        pass 
+        pass
+
     def render(self):
         self.renderer.header(self.title)
         for paragraph in self.paragraphs:
@@ -116,11 +116,9 @@ class TextRenderer:
         self.file = file
         self.previous = False
 
-
     def header(self, title):
         self.file.write("{0:^{2}}\n{1:^{2}}\n".format(title,
-                "=" * len(title), self.width))
-
+                        "=" * len(title), self.width))
 
     def paragraph(self, text):
         if self.previous:
@@ -129,41 +127,34 @@ class TextRenderer:
         self.file.write("\n")
         self.previous = True
 
-
     def footer(self):
         """
         print text END OF TEXT PAGE
         """
-        #TODO Implement me
-
+        # TODO Implement me
         pass
- 
+
 
 class HtmlWriter:
 
     def __init__(self, file=sys.stdout):
         self.file = file
 
-
     def header(self):
         self.file.write("<!doctype html>\n<html>\n")
 
-
     def title(self, title):
         self.file.write("<head><title>{}</title></head>\n".format(
-                escape(title)))
+                        escape(title)))
 
     def start_body(self):
         self.file.write("<body>\n")
 
-
     def body(self, text):
         self.file.write("<p>{}</p>\n".format(escape(text)))
 
-
     def end_body(self):
         self.file.write("</body>\n")
-
 
     def footer(self):
         self.file.write("</html>\n")
@@ -172,82 +163,83 @@ class HtmlWriter:
 class HtmlRenderer:
 
     def __init__(self, htmlWriter):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
 
     def header(self, title):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
 
     def paragraph(self, text):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
 
     def footer(self):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
+
+
 class MarkdownRenderer:
 
     def __init__(self, markdownWriter):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
+
     def header(self, title):
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def paragraph(self, text):
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def footer(self):
         pass
+
 
 class MarkdownWriter:
 
     def __init__(self, file=sys.stdout):
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def header_level_1(self, text):
         """
-        Writes a 1st level heading text in Markdown format. Example 
+        Writes a 1st level heading text in Markdown format. Example
         of 1st level heading:
-        
+
         # Lorem Ipsum Dolor Sit Amet
-    
+
         """
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def paragraph(self, text):
         """
-        Writes a paragraph text in Markdown format. The text is 
+        Writes a paragraph text in Markdown format. The text is
         simply written and appended with a new line symbol ('\n')
         """
-        #TODO Implement me
+        # TODO Implement me
         pass
+
 
 class reSTRenderer:
 
     def __init__(self, restWriter):
-        #TODO Implement me
+        # TODO Implement me
         pass
- 
+
     def header(self, title):
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def paragraph(self, text):
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def footer(self):
         pass
+
 
 class reSTWriter:
 
@@ -256,29 +248,28 @@ class reSTWriter:
 
     def header_level_1(self, text):
         """
-        Writes a 1st level heading text in Restructured format. Example 
+        Writes a 1st level heading text in Restructured format. Example
         of 1st level heading:
 
         ==========================
         Lorem Ipsum Dolor Sit Amet
         ==========================
 
-        Notice that the heading text is followed by a sequence of 
-        '=' symbols whose length is equal to the lenght of the 
-        heading text. Both heading text and sequence of '=' symbols 
+        Notice that the heading text is followed by a sequence of
+        '=' symbols whose length is equal to the lenght of the
+        heading text. Both heading text and sequence of '=' symbols
         are also appended with a new line symbol ('\n')
         """
-        #TODO Implement me
+        # TODO Implement me
         pass
 
     def paragraph(self, text):
         """
-        Writes a paragraph text in Markdown format. The text is 
+        Writes a paragraph text in Restructured format. The text is
         simply written and appended with a new line symbol ('\n')
         """
-        #TODO Implement me
+        # TODO Implement me
         pass
-
 
 
 if __name__ == "__main__":

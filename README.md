@@ -12,7 +12,7 @@ code snippets.
         - [Regular class](week_0_reg/README.md)
     2. [Exercise 1 - Abstract Factory & Builder](week_1/README.md)
     3. [Exercise 2 - Factory Method & Singleton](week_2/README.md)
-    4. [Exercise 3 - TBA](/#)
+    4. [Exercise 3 - Adapter & Bridge](week_3/README.md)
     5. [Exercise 4 - TBA](/#)
     6. [Exercise 5 - TBA](/#)
     7. [Exercise 6 - TBA](/#)
@@ -31,7 +31,7 @@ First week of the class:
 
 1. Fork this repository to your account
 2. `git clone https://gitlab.com/<YOURNAME>/lab-exercises.git`
-3. Change direcotry to the recently cloned directory, i.e. `cd lab-exercises`
+3. Change directory to the recently cloned directory, i.e. `cd lab-exercises`
 4. `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
 5. Tell us your GitLab username and URL to your tutorial repository
 
