@@ -210,6 +210,7 @@ class MarkdownWriter:
 
         # Lorem Ipsum Dolor Sit Amet
 
+        You can see that you only have to add # in front of the heading text
         """
         # TODO Implement me
         pass
