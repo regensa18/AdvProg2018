@@ -39,15 +39,18 @@ If there are updates from upstream:
 
 1. `git pull upstream master`
 2. Fix any merge conflict(s) that might arise (hopefully none)
+    - Always choose latest commit from `upstream` when fixing merge
+    conflict(s)
 
 Working on a tutorial problem set:
 
-1. `cd week_n` where **n** is week number folder ID. E.g. **week_2**
-2. `git checkout -b lab-week-n`
-3. Do the exercises as instructed in its README.md file
-4. Commit your work frequently
-5. Write good commit message(s)
-6. If your work is ready for grading: `git push -u origin lab-week-n`
+1. Pull any updates from `upstream`
+2. `cd week_n` where **n** is week number folder ID. E.g. **week_2**
+3. `git checkout -b lab-week-n master`
+4. Do the exercises as instructed in its README.md file
+5. Commit your work frequently
+6. Write good commit message(s)
+7. If your work is ready for grading: `git push -u origin lab-week-n`
 
 If you want to know the detailed explanation about each instructions above,
 please read the following sections.
@@ -60,13 +63,13 @@ will create a copy of this repository under your own account.
 `https://gitlab.com/<YOURNAME>/lab-exercises` where `<YOURNAME>`
 is your GitLab username.
 3. Set the clone URL to HTTPS and copy the URL into clipboard.
-4. Clone the repository into your local machine. The Git command:
+4. Clone the repository into your local machine. Use Git command:
 `git clone https://gitlab.com/<YOURNAME>/lab-exercises.git <PATH>`
 where `<PATH>` is a path to a directory in your local machine.
 5. Go to the directory where the cloned repository is located in your
 local machine.
 6. Add new remote called **upstream** that points to the original
-GitLab repository. The Git command: `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
+GitLab repository. Use Git command: `git remote add upstream https://gitlab.com/CSUI-AdvProg-2017/lab-exercises.git`
 7. Tell your TA about your GitLab username and URL to your tutorial
 repository so s/he can grade it later.
 8. Ensure that your repository page has visibility level set to
@@ -79,8 +82,10 @@ your repository page.
 directory that containing week 1 problem, i.e. `week_1`.
 2. To ensure your work regarding week 1 problem is isolated from
 your other attempts at other problems, create a new branch
-specifically for working on week 1 problem. The Git command:
-`git checkout -b lab-week-1`
+specifically for working on week 1 problem. Use Git command:
+`git checkout -b lab-week-1 master`
+    - Explanation: Create a new branch named `lab-week-1` based on 
+    latest commit in `master` branch.
 3. Read the README file in `week_1` directory. It contains set of
 mandatory and optional tasks that you can work on.
 4. Do the tutorial.
@@ -101,6 +106,12 @@ your repository on GitLab, do a Git push. The Git command:
 If there are any updates from upstream, you can get the latest commits
 and integrate it into your fork by using the following Git command:
 `git pull upstream master`
+
+Merge conflicts may arise since the repository is updated weekly and
+may have overlapping changes with the `master` branch in your own
+forked repository. If merge conflict happens, please always use latest
+commit from `upstream`. Your works are safe as long you put in in its
+own separate branches, e.g. `lab-week-1`, `lab-week-2`, and so forth.
 
 ## Tutorial Demonstration Mechanism
 
