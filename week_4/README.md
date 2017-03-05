@@ -52,7 +52,8 @@ For week4.py
     commited and pushed to GitLab.
 
 For FacadeDemo.py
-* [ ] Explained what is Facade Pattern, and how it is implemented inside FacadeDemo.py
+* [ ] Explained in a new text file named m2facade.txt what is Facade Pattern
+and how it is implemented inside FacadeDemo.py
 
 Additional Checklist
 --------------------
@@ -65,9 +66,6 @@ For week4.py
 * [ ] Decorated `Item` class with `do_log()` class decorator.
 * [ ] The `do_log()` class decorator is working properly when the 
     program is run.
-
-For FacadeDemo.py
-* [ ] 
 
 Additional Resources
 --------------------
