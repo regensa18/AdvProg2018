@@ -7,26 +7,29 @@ Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 [![build status](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/badges/week-4/build.svg)](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/commits/week-4)* * *
 
-*Friday, March 10th 2017*
-
 Your task in this exercise is to complete two kinds of Composite 
-pattern implementation and implement two decorators. You are 
+pattern implementation and implement two decorators (week4.py). You are 
 given a simple program that illustrates how simple and composite 
 objects are created in each version of Composite pattern implementation 
 as described in the textbook. The program has several parts have 
 been omitted and need to be implemented.
-
 During the course of this exercise, you are also asked to implement 
-a function decorator (mandatory) and a class decorator (optional). 
-The specification of both decorators are described in in-class 
-worksheet that is distributed in Wednesday.
+a function decorator (mandatory) and a class decorator (optional).
+
+Also, you need to give your understanding about a given code using
+Facade pattern for mandatory. For additional, you need to modify the
+program to a given specification.
+
+Summary
+1. complete [week4.py](week4.py)
+2. explain & modify [FacadeDemo.py](FacadeDemo.py)
 
 # Mandatory Checklist
 
 You are required to do all tasks in the mandatory checklist. You also
 need to be able to explain your works to your TA during demo session.
 
-
+For week4.py
 * [ ] All unit tests (except `test_composite()`) related to methods in 
     `SimpleItem` pass without failures.
 * [ ] The state of work related to `SimpleItem` implementation is commited 
@@ -48,9 +51,13 @@ need to be able to explain your works to your TA during demo session.
 * [ ] The state of work related to implementing function decorator is
     commited and pushed to GitLab.
 
+For FacadeDemo.py
+* [ ] Explained what is Facade Pattern, and how it is implemented inside FacadeDemo.py
+
 Additional Checklist
 --------------------
 
+For week4.py
 * [ ] Implemented `test_composite()` unit test in `SimpleItemTest`.
 * [ ] Implemented `test_composite()` unit test in `CompositeItemTest`.
 * [ ] Implemented remaining unit tests in `ItemTest`.
@@ -58,6 +65,9 @@ Additional Checklist
 * [ ] Decorated `Item` class with `do_log()` class decorator.
 * [ ] The `do_log()` class decorator is working properly when the 
     program is run.
+
+For FacadeDemo.py
+* [ ] 
 
 Additional Resources
 --------------------
