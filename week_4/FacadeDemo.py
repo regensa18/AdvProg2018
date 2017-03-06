@@ -109,7 +109,8 @@ class Car(object):
             while self.has_enough_fuel(km, self.km_per_litre):
                 self.consume_fuel(km)
                 print('Drove {}km'.format(km))
-                print('{:.2f}l of fuel still left'.format(self.fuel_tank.level))
+                print('{:.2f}l of fuel still left'.format(
+                       self.fuel_tank.level))
         else:
             print('Can\'t drive. The Engine is turned off!')
 
@@ -145,6 +146,7 @@ def main():
 
     car.start()
     car.drive()
+
 
 if __name__ == '__main__':
     main()
