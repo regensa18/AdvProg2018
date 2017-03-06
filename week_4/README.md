@@ -21,13 +21,20 @@ Facade pattern for mandatory. For additional, you need to modify the
 program to a given specification.
 
 Summary
-1. complete [week4.py](week4.py)
-2. explain & modify [FacadeDemo.py](FacadeDemo.py)
+1. enable pipeline on your repository
+2. complete [week4.py](week4.py)
+3. explain the structure, functionality, and benefit of Facade Pattern
+[FacadeDemo.py](FacadeDemo.py) in a simple paragraph 
 
 # Mandatory Checklist
 
 You are required to do all tasks in the mandatory checklist. You also
 need to be able to explain your works to your TA during demo session.
+
+Enabling pipeline
+* [ ] enable your pipeline access so it can be accessed by everyone by
+going to the link https://gitlab.com/[YOUR_GITLAB_USERNAME]/lab-exercises/edit
+and select pipeline: everyone with access
 
 For week4.py
 * [ ] All unit tests (except `test_composite()`) related to methods in 
@@ -52,8 +59,9 @@ For week4.py
     commited and pushed to GitLab.
 
 For FacadeDemo.py
-* [ ] Explained in a new text file named m2facade.txt what is Facade Pattern
-and how it is implemented inside FacadeDemo.py
+* [ ] Explained in a new text file named m2facade.txt what is Facade Pattern,
+its structure, functionality, and benefit, and how it is implemented inside
+FacadeDemo.py (point out what makes it Facade Pattern)
 
 Additional Checklist
 --------------------
