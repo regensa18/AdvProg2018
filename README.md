@@ -13,7 +13,7 @@ code snippets.
     2. [Exercise 1 - Abstract Factory & Builder](week_1/README.md)
     3. [Exercise 2 - Factory Method & Singleton](week_2/README.md)
     4. [Exercise 3 - Adapter & Bridge](week_3/README.md)
-    5. [Exercise 4 - TBA](/#)
+    5. [Exercise 4 - Composite, Decorator, Facade](week_4/README.md)
     6. [Exercise 5 - TBA](/#)
     7. [Exercise 6 - TBA](/#)
     8. [Exercise 7 - TBA](/#)
@@ -91,7 +91,7 @@ mandatory and optional tasks that you can work on.
 4. Do the tutorial.
 5. Use `git add` or `git rm` to stage/unstage files that you want to
 save into Git later.
-6. Once you want to save your progress, commit your work to Git. The
+6. Once you want to save your progress, commit your work to Git. Use
 Git command: `git commit` A text editor will apear where you should
 write a commit message. Please try to follow the guidelines written
 in [this guide](http://chris.beams.io/posts/git-commit/) on how to
@@ -113,24 +113,36 @@ forked repository. If merge conflict happens, please always use latest
 commit from `upstream`. Your works are safe as long you put in in its
 own separate branches, e.g. `lab-week-1`, `lab-week-2`, and so forth.
 
-## Tutorial Demonstration Mechanism
+## Grading Scheme & Demonstration
 
+Weekly tutorials contribute **10%** to the final grade of this course.
+For each exercises, student can obtain grade ranging from **A (4)** to
+**E (0)**. The grading scheme is as follows:
+
+1. **A** if student completed **all mandatory and optional tasks**
+2. **B** if student completed **all mandatory tasks** and **at least
+    half of the optional tasks**
+3. **C** if student completed **at least half of the mandatory tasks**
+4. **D** if student did not demonstrate their work to teaching
+    assistant, **regardless the completion of the tasks**
+5. **E** if student skipped the tutorial by doing nothing, e.g.
+    no signs of work or branch related to the tutorial in the
+    repository
+
+All students required to demonstrate their work to teaching assistant.
 This demonstration mechanism applies for both students in Regular and
 International classes:
 
-1. Demonstrations should be done at most in the end of Friday of the
-lab session week. The time allocation for the demonstration can be
-adjusted to the availability of the Teaching Assistants. As long as
-the demonstration is still done in Friday, students have the chance
-to achieve maximum score for the tutorial.
-
+1. Demonstrations should be done no later than the end of Friday of the
+    lab session week. The time allocation for the demonstration can be
+    adjusted to the availability of the Teaching Assistants. As long as
+    the demonstration is still done in Friday, students have the chance
+    to achieve maximum score for the tutorial.
 2. If the demonstration is done after Friday and before the following
-Tuesday, then the maximum score the student can get for that tutorial
-is C, equivalent with attending the Lab session and only doing the
-mandatory tasks.
-
-3. Demonstrations will be done with the last commit made by the
-student before 12:00 AM of Friday in the same week of the Lab session.
-In other words, students can still work on the tutorial and push their
-commits until Thursday 23:59 PM.
-
+    Tuesday, then the maximum score the student can get for that tutorial
+    is **B**, equivalent with attending the lab session and only doing the
+    mandatory tasks.
+3. For International class students, demonstration will be done using
+    the latest commit made by the student before 12:00 AM of Friday in
+    the same week of the lab session. In other words, students can still
+    work on the tutorial and push their commits until Thursday 23:59 PM.
