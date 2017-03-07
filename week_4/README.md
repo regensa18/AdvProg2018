@@ -1,32 +1,58 @@
-# Exercise 4: Composite, Decorator, and Fa Pattern
+# Exercise 4: Composite, Decorator, and Facade Pattern
 
 CSCM602023 - Advanced Programming (Pemrograman Lanjut) @ Faculty of
 Computer Science Universitas Indonesia, Even Semester 2016/2017
 
 * * *
 
-[![build status](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/badges/week-4/build.svg)](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/commits/week-4)* * *
+[![build status](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/badges/week-4/build.svg)](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/commits/week-4)
 
-Your task in this exercise is to complete two kinds of Composite 
-pattern implementation and implement two decorators (week4.py). You are 
-given a simple program that illustrates how simple and composite 
-objects are created in each version of Composite pattern implementation 
-as described in the textbook. The program has several parts have 
-been omitted and need to be implemented.
-During the course of this exercise, you are also asked to implement 
-a function decorator (mandatory) and a class decorator (optional).
+Your tasks in this exercise are to complete a partial implementation
+of Composite pattern and create a simple decorator function. The code
+for Composite pattern is taken from an example available where it 
+illustrates the traditional Composite pattern implementation by having
+separate classes for representing **simple** and **composite** items.
 
-Also, you need to give your understanding about a given code using
-Facade pattern for mandatory. For additional, you need to modify the
-program to a given specification.
+The code contains several parts that already been omitted in a way that
+it fails the unit tests. You are required to complete the code and
+ensure that it pass every unit tests (i.e. achieving `green` build in
+GitLab pipeline).
 
-Summary
-1. enable pipeline on your repository
-2. complete [week4.py](week4.py)
-3. explain the structure, functionality, and benefit of Facade Pattern
-[FacadeDemo.py](FacadeDemo.py) in a simple paragraph 
+Your code will be run by GitLab CI Runner instance where it will do
+`git clone` to your repository and try to run one or more jobs that
+will evaluate the correctness of your work. If everything goes well
+on every predefined jobs, the [Pipeline](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/pipelines)
+will report a `green` (i.e. success) build. Otherwise, it will report
+`orange` (i.e. warning) or `red` (i.e. fail) build.
 
-# Mandatory Checklist
+However, you can manually run the unit tests in your own PC. You can
+do so by executing the following command in your shell:
+`python -m unittest week_4/test_week4.py`
+
+You also need to create a simple decorator function named `logged()`
+in this exercise. The specifications for the decorator function is
+as follows:
+
+1. The decorator shall print the **name of the decorated function**
+**BEFORE** the decorated function is called
+2. The decorator shall print the **number of arguments** passed to the
+decorated function **BEFORE** the decorated function is called
+3. (Optional) The decorator also print the **string representation of
+each arguments** that passed to the decorated function **BEFORE** the
+decorated function is called
+4. The decorator will be applied to a function with varying
+number of arguments, i.e. it can be a function without arguments or
+function with any number of arguments
+
+At the end of exercise, you are also asked to understand a toy example
+of Facade pattern implementation and write your explanation into a text
+file. Ensure that you can explain it to your TA as well. At minimum,
+you should be able to explain the structure, purpose, and benefit of
+Facade pattern.
+
+* * *
+
+## Mandatory Checklist
 
 You are required to do all tasks in the mandatory checklist. You also
 need to be able to explain your works to your TA during demo session.
@@ -63,8 +89,7 @@ For FacadeDemo.py
 its structure, functionality, and benefit, and how it is implemented inside
 FacadeDemo.py (point out what makes it Facade Pattern)
 
-Additional Checklist
---------------------
+## Additional Checklist
 
 For week4.py
 * [ ] Implemented `test_composite()` unit test in `SimpleItemTest`.
@@ -75,8 +100,6 @@ For week4.py
 * [ ] The `do_log()` class decorator is working properly when the 
     program is run.
 
-Additional Resources
---------------------
+## Additional Resources
 
 N/A
-
