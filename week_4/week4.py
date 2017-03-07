@@ -10,30 +10,22 @@
 # General Public License for more details.
 
 # This program has been modified from its original source
-# (stationery1, stationery2.py) to fit in Advanced Programming 2016 
+# (stationery1, stationery2.py) to fit in Advanced Programming 2017
 # week 4 exercise.
 
 import abc
-import functools
-import itertools
 import sys
 
 def logged(function):
     # TODO Implement me!
     pass
 
-def do_log(Class):
-    # TODO Implement me!
-    # Hint: `inspect` module might be useful in implementing this
-    # class decorator
-    pass
-
 def main():
-    pencil = Item.create("Pencil", 0.40)
-    ruler = Item.create("Ruler", 1.60)
+    pencil = make_item("Pencil", 0.40)
+    ruler = make_item("Ruler", 1.60)
     eraser = make_item("Eraser", 0.20)
-    pencilSet = Item.compose("Pencil Set", pencil, ruler, eraser)
-    box = Item.create("Box", 1.00)
+    pencilSet = make_composite("Pencil Set", pencil, ruler, eraser)
+    box = make_item("Box", 1.00)
     boxedPencilSet = make_composite("Boxed Pencil Set", box, 
             pencilSet)
     boxedPencilSet.add(pencil)
@@ -46,9 +38,6 @@ class AbstractItem(metaclass=abc.ABCMeta):
     @abc.abstractproperty
     def composite(self):
         pass
-
-    def __iter__(self):
-        return iter([])
 
 
 class SimpleItem(AbstractItem):
@@ -85,6 +74,10 @@ class AbstractCompositeItem(AbstractItem):
     def __iter__(self):
         return iter(self.children)
 
+    def __len__(self):
+        # TODO Fix me!
+        return 0
+
 
 class CompositeItem(AbstractCompositeItem):
 
@@ -99,82 +92,24 @@ class CompositeItem(AbstractCompositeItem):
     
     @property
     def price(self):
-        return sum(item.price for item in self)
+        # TODO Implement me!
 
     def print(self, indent="", file=sys.stdout):
         print("{}${:.sf} {}".format(indent, self.price, self.name), 
-                file=file)
+               file=file)
         for child in self:
             # Passed the file parameter to child.print() calls
             # in order to make print() more properly testable
             child.print(indent + "      ", file)
 
 
-class Item:
-# TODO Add do_log class decorator!
-
-    def __init__(self, name, *items, price=0.00):
-        self.name = name
-        self.price = price
-        self.children = []
-        if items:
-            self.add(*items)
-
-    @classmethod
-    def create(Class, name, price):
-        # TODO Implement me!
-        pass
-
-    @classmethod
-    def compose(Class, name, *items):
-        # TODO Implement me!
-        pass
-
-    @property
-    def composite(self):
-        # TODO Implement me!
-        pass
-
-    def add(self, first, *items):
-        # TODO Implement me!
-        pass
-
-    def remove(self, item):
-        # TODO Implement me!
-        pass
-
-    def __iter__(self):
-        return iter(self.children)
-
-    @property
-    def price(self):
-        # TODO Implement me!
-        pass
-
-    @price.setter
-    def price(self, price):
-        # TODO Implement me!
-        pass
-
-    def print(self, indent="", file=sys.stdout):
-        print("{}${:.2f} {}".format(indent, self.price, self.name),
-                file=file)
-        for child in self:
-            # Passed the file parameter to child.print() calls
-            # in order to make print() more properly testable
-            child.print(indent + "      ", file=file)
-
-    def __repr__(self):
-        return "{}:${}".format(self.name, self.price)
-
-
 def make_item(name, price):
-    # TODO Add logged function decorator!
-    return Item(name, price=price)
+    # TODO Apply `logged` decorator to this function
+    return SimpleItem(name, price=price)
 
 def make_composite(name, *items):
-    # TODO Add logged function decorator!
-    return Item(name, *items)
+    # TODO Apply `logged` decorator to this function
+    return CompositeItem(name, *items)
 
 if __name__ == "__main__":
     main()
