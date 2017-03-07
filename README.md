@@ -41,6 +41,9 @@ If there are updates from upstream:
 2. Fix any merge conflict(s) that might arise (hopefully none)
     - Always choose latest commit from `upstream` when fixing merge
     conflict(s)
+3. Do not forget to commit your merged `master` branch and push it
+to your own `master` branch at GitLab repository
+    - Use Git command: `git push origin master`
 
 Working on a tutorial problem set:
 
@@ -112,6 +115,11 @@ may have overlapping changes with the `master` branch in your own
 forked repository. If merge conflict happens, please always use latest
 commit from `upstream`. Your works are safe as long you put in in its
 own separate branches, e.g. `lab-week-1`, `lab-week-2`, and so forth.
+
+Once you have resolved any merge conflicts and all commits from
+upstream are merged succesfully to your own `master` branch, do not
+forget to push it back to your own GitLab repository. Use Git command:
+`git push origin master`
 
 ## Grading Scheme & Demonstration
 
