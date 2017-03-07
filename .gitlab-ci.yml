@@ -111,7 +111,10 @@ prep_week_4:
 grade_week_4_mandatory:
   stage: test
   script:
-    - echo "TODO"
+    - file week_4/{week4.py,test_week4.py,m1facade.txt}
+    - python -m unittest discover week_4
+    - python week_4/week4.py
+    - cat week_4/m1facade.txt
   only:
     - /^lab[-_].*4$/
   except:
@@ -122,7 +125,8 @@ grade_week_4_mandatory:
 grade_week_4_additional:
   stage: test
   script:
-    - echo "TODO"
+    - file week_4/week4a.py
+    - python week_4/week4a.py
   only:
     - /^lab[-_].*3$/
   except:

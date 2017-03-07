@@ -33,8 +33,8 @@ you have to enable Pipeline access so it can be viewed publicly.
 Sometimes GitLab may have delays on running your code because
 it uses shared instance of runners. You can manually run the unit
 tests in your own PC without having to commit and push it to your
-repository. You can do so by executing the following command in your
-shell: `python -m unittest week_4/test_week4.py`
+repository. You can do so by executing the following command inside
+week 4 directory: `python -m unittest test_week4.py`
 
 You also need to create a simple decorator function named `logged()`
 in this exercise. The specifications for the decorator function is
@@ -67,7 +67,7 @@ need to be able to explain your works to your TA during demo session.
 
 - [ ] Set your repository's Pipeline permission to **Everyone with access**
     - Change it by going to: `https://gitlab.com/<YOURGITLABUSERNAME>/lab-exercises/edit`
-- [ ] Implement blank methods in week3.py module
+- [ ] Implement blank methods in week4.py module
     - Tip: Do not forget to commit and push your work frequently even
     though it is not yet finished
 - [ ] Demonstrate to your TA that all of the unit tests pass
@@ -87,6 +87,11 @@ your analysis result into a text file named `m1facade.txt`
 - [ ] Implement the additional/optional specifications for `logged()`
 decorator function, i.e. the one that prints string values of each
 arguments
+- [ ] Create a new Python module named `week4a.py` containing Python
+statements to demonstrate the optional specifications for `logged()`
+decorator is working
+    - Hint: Import `SimpleItem`, `CompositeItem`, and two `make_*`
+    functions from `week4` module into `week4a`
 - [ ] Demonstrate to your TA that `logged()` function still works
 correctly and produces result as expected in the optional
 specifications
