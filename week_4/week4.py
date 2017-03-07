@@ -74,10 +74,6 @@ class AbstractCompositeItem(AbstractItem):
     def __iter__(self):
         return iter(self.children)
 
-    def __len__(self):
-        # TODO Fix me!
-        return 0
-
 
 class CompositeItem(AbstractCompositeItem):
 
@@ -93,6 +89,7 @@ class CompositeItem(AbstractCompositeItem):
     @property
     def price(self):
         # TODO Implement me!
+        pass
 
     def print(self, indent="", file=sys.stdout):
         print("{}${:.sf} {}".format(indent, self.price, self.name), 
