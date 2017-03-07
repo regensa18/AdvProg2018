@@ -1,6 +1,7 @@
 import unittest
 from week4 import SimpleItem, CompositeItem
 
+
 class SimpleItemTest(unittest.TestCase):
 
     def setUp(self):
@@ -28,10 +29,10 @@ class CompositeItemTest(SimpleItemTest):
 
     def setUp(self):
         super().setUp()
-        self.pencilSet = CompositeItem("Pencil Set", self.pencil, 
+        self.pencilSet = CompositeItem("Pencil Set", self.pencil,
                                        self.ruler, self.eraser)
         self.box = SimpleItem("Box", 1.00)
-        self.boxedPencilSet = CompositeItem("Boxed Pencil Set", 
+        self.boxedPencilSet = CompositeItem("Boxed Pencil Set",
                                             self.box, self.pencilSet)
         self.boxedPencilSet.add(self.pencil)
 

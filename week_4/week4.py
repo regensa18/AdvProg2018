@@ -16,9 +16,11 @@
 import abc
 import sys
 
+
 def logged(function):
     # TODO Implement me!
     pass
+
 
 def main():
     pencil = make_item("Pencil", 0.40)
@@ -26,8 +28,8 @@ def main():
     eraser = make_item("Eraser", 0.20)
     pencilSet = make_composite("Pencil Set", pencil, ruler, eraser)
     box = make_item("Box", 1.00)
-    boxedPencilSet = make_composite("Boxed Pencil Set", box, 
-            pencilSet)
+    boxedPencilSet = make_composite("Boxed Pencil Set", box,
+                                    pencilSet)
     boxedPencilSet.add(pencil)
     for item in (pencil, ruler, eraser, pencilSet, boxedPencilSet):
         item.print()
@@ -52,8 +54,8 @@ class SimpleItem(AbstractItem):
         pass
 
     def print(self, indent="", file=sys.stdout):
-        print("{}${:.2f} {}".format(indent, self.price, self.name), 
-            file=file)
+        print("{}${:.2f} {}".format(indent, self.price, self.name),
+              file=file)
 
 
 class AbstractCompositeItem(AbstractItem):
@@ -85,15 +87,15 @@ class CompositeItem(AbstractCompositeItem):
     def composite(self):
         # TODO Implement me!
         pass
-    
+
     @property
     def price(self):
         # TODO Implement me!
         pass
 
     def print(self, indent="", file=sys.stdout):
-        print("{}${:.sf} {}".format(indent, self.price, self.name), 
-               file=file)
+        print("{}${:.2f} {}".format(indent, self.price, self.name),
+              file=file)
         for child in self:
             # Passed the file parameter to child.print() calls
             # in order to make print() more properly testable
@@ -104,9 +106,11 @@ def make_item(name, price):
     # TODO Apply `logged` decorator to this function
     return SimpleItem(name, price=price)
 
+
 def make_composite(name, *items):
     # TODO Apply `logged` decorator to this function
     return CompositeItem(name, *items)
+
 
 if __name__ == "__main__":
     main()
