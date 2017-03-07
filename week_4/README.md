@@ -18,16 +18,23 @@ it fails the unit tests. You are required to complete the code and
 ensure that it pass every unit tests (i.e. achieving `green` build in
 GitLab pipeline).
 
-Your code will be run by GitLab CI Runner instance where it will do
+Your code will be run by a GitLab CI Runner instance where it will do
 `git clone` to your repository and try to run one or more jobs that
-will evaluate the correctness of your work. If everything goes well
-on every predefined jobs, the [Pipeline](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/pipelines)
-will report a `green` (i.e. success) build. Otherwise, it will report
-`orange` (i.e. warning) or `red` (i.e. fail) build.
+will evaluate the correctness of your work. The jobs can be in form
+of running unit tests or checking whether the required files exist in
+certain directory.
 
-However, you can manually run the unit tests in your own PC. You can
-do so by executing the following command in your shell:
-`python -m unittest week_4/test_week4.py`
+If everything goes well on every jobs, the [Pipeline](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises/pipelines)
+will report a `green` (i.e. success) build. Otherwise, it will report
+`orange` (i.e. warning) or `red` (i.e. fail) build. This information
+must be given to your TA to help him/her grade your work. Therefore,
+you have to enable Pipeline access so it can be viewed publicly.
+
+Sometimes GitLab may have delays on running your code because
+it uses shared instance of runners. You can manually run the unit
+tests in your own PC without having to commit and push it to your
+repository. You can do so by executing the following command in your
+shell: `python -m unittest week_4/test_week4.py`
 
 You also need to create a simple decorator function named `logged()`
 in this exercise. The specifications for the decorator function is
@@ -57,49 +64,40 @@ Facade pattern.
 You are required to do all tasks in the mandatory checklist. You also
 need to be able to explain your works to your TA during demo session.
 
-Enabling pipeline
-* [ ] enable your pipeline access so it can be accessed by everyone by
-going to the link https://gitlab.com/[YOUR_GITLAB_USERNAME]/lab-exercises/edit
-and select pipeline: everyone with access
 
-For week4.py
-* [ ] All unit tests (except `test_composite()`) related to methods in 
-    `SimpleItem` pass without failures.
-* [ ] The state of work related to `SimpleItem` implementation is commited 
-    and pushed to GitLab.
-* [ ] All unit tests (except `test_composite()`) related to methods in 
-    `CompositeItem` pass without failures.
-* [ ] The state of work related to `CompositeItem` implementation is 
-    commited and pushed to GitLab.
-* [ ] All unit tests (except `test_create()`, `test_compose()`, 
-    `test_composite()`, and `test_print_simple()`) related to methods in 
-    `Item` pass without failures.
-* [ ] The state of work related to `Item` implementation is 
-    commited and pushed to GitLab.
-* [ ] Implemented `logged()` function decorator.
-* [ ] Decorated `make_item()` and `make_composite()` functions with 
-    `logged()` function decorator.
-* [ ] The `logged()` decorator is working properly when the program 
-    calls `make_item()` and `make_composite()`.
-* [ ] The state of work related to implementing function decorator is
-    commited and pushed to GitLab.
-
-For FacadeDemo.py
-* [ ] Explained in a new text file named m2facade.txt what is Facade Pattern,
-its structure, functionality, and benefit, and how it is implemented inside
-FacadeDemo.py (point out what makes it Facade Pattern)
+- [ ] Set your repository's Pipeline permission to **Everyone with access**
+    - Change it by going to: `https://gitlab.com/<YOURGITLABUSERNAME>/lab-exercises/edit`
+- [ ] Implement blank methods in week3.py module
+    - Tip: Do not forget to commit and push your work frequently even
+    though it is not yet finished
+- [ ] Demonstrate to your TA that all of the unit tests pass
+- [ ] Implement `logged()` decorator function according to the given
+specifications
+- [ ] Apply `logged()` decorator to `make_item()` and
+`make_composite()` 
+- [ ] Demonstrate to your TA that your `logged()` decorator is working
+according to the specifications when the program calls `make_item()`
+- [ ] Analyse the given Facade example (i.e. `FacadeDemo.py`) and write 
+your analysis result into a text file named `m1facade.txt`
+    - The text should contain explanation regarding the structure, purpose,
+    benefit, and how it was implemented in the example
 
 ## Additional Checklist
 
-For week4.py
-* [ ] Implemented `test_composite()` unit test in `SimpleItemTest`.
-* [ ] Implemented `test_composite()` unit test in `CompositeItemTest`.
-* [ ] Implemented remaining unit tests in `ItemTest`.
-* [ ] Implemented `do_log()` class decorator.
-* [ ] Decorated `Item` class with `do_log()` class decorator.
-* [ ] The `do_log()` class decorator is working properly when the 
-    program is run.
+- [ ] Implement the additional/optional specifications for `logged()`
+decorator function, i.e. the one that prints string values of each
+arguments
+- [ ] Demonstrate to your TA that `logged()` function still works
+correctly and produces result as expected in the optional
+specifications
 
 ## Additional Resources
 
 N/A
+
+## Credits
+
+- FacadeDemo.py by [jackaljack](https://github.com/jackaljack)
+
+    The example can be found in his [design-patterns](https://github.com/jackaljack/design-patterns) repository on
+    GitHub. It is licensed under [MIT License](https://github.com/jackaljack/design-patterns/blob/master/LICENSE).
