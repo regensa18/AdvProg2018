@@ -34,7 +34,8 @@ class CompositeItemTest(SimpleItemTest):
         self.box = SimpleItem("Box", 1.00)
         self.boxedPencilSet = CompositeItem("Boxed Pencil Set",
                                             self.box, self.pencilSet)
-        self.boxedPencilSet.add(self.pencil)
+        self.marker = SimpleItem("Marker", 0.40)
+        self.boxedPencilSet.add(self.marker)
 
     def test_create(self):
         self.assertEqual("Pencil Set", self.pencilSet.name)
@@ -46,8 +47,8 @@ class CompositeItemTest(SimpleItemTest):
         self.assertTrue(self.boxedPencilSet.composite)
 
     def test_price(self):
-        self.assertAlmostEqual(2.20, self.pencilSet)
-        self.assertAlmostEqual(3.20, self.boxedPencilSet)
+        self.assertAlmostEqual(2.20, self.pencilSet.price)
+        self.assertAlmostEqual(3.60, self.boxedPencilSet.price)
 
     def test_add_simple_item(self):
         num_before = len(self.boxedPencilSet.children)
@@ -57,5 +58,5 @@ class CompositeItemTest(SimpleItemTest):
 
     def test_remove_simple_item(self):
         num_before = len(self.boxedPencilSet.children)
-        self.pencilSet.remove(self.pencil)
+        self.boxedPencilSet.remove(self.marker)
         self.assertEqual(num_before - 1, len(self.boxedPencilSet.children))
