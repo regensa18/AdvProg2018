@@ -110,7 +110,7 @@ check_week_4_mandatory:
   script:
     - test -e week_4/week4.py
     - test -e week_4/test_week4.py
-    - test -e week_4/m1facade.py
+    - test -e week_4/m1facade.txt
   only:
     - /^lab[-_].*4$/
   except:
