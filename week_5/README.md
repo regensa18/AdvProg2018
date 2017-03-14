@@ -50,7 +50,7 @@ pattern for handling process pipelining. Your tasks:
     data in range 0 to 19. If the data is beyond the expected range,
     it shall be passed to the next handler, i.e. `ProcessLevel2`
     2. Complete `ProcessLevel2` class that should only able to handle
-    data in range 29 to 39. If the data is beyond the expected range,
+    data in range 20 to 39. If the data is beyond the expected range,
     it shall be passed to the next handler, i.e. `ProcessLevel3`
     3. Complete `ProcessLevel3` class that should only able to handle
     data in range 40 to 59. If the data is beyond the expected range,
@@ -105,7 +105,7 @@ implementation for executing Command inside `Gundam` and `Megazord` objects
 
 Make sure that all classes & methods that you worked on produce output that
 is similar to the expected output. You can read the main procedure written
-in each modules to know the expected output. Additionally, you also need to
+in each modules to know the expected output, and **change the template code if necessary, but not the main method**. Additionally, you also need to
 ensure that the unit tests pass for both mandatory and additional exercises.
 
 * * *
