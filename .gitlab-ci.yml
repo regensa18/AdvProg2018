@@ -152,3 +152,39 @@ grade_week_4_additional:
     - master
     - branches@CSUI-AdvProg-2017/lab-exercises
   allow_failure: true
+
+# Week 5
+
+prep_week_5:
+  stage: build
+  script:
+    - test -e week_5/README.md
+    - python -m flake8 week_5
+  only:
+    - /^week-5$/@CSUI-AdvProg-2017/lab-exercises
+
+grade_week_5_mandatory:
+  stage: test
+  script:
+    - cd week_5
+    - python -m unittest tests/m1com-tests.py
+    - python -m unittest tests/m1cor-tests.py
+  only:
+    - /^lab[-_].*5$/
+  except:
+    - master
+    - branches@CSUI-AdvProg-2017/lab-exercises
+  allow_failure: false
+
+grade_week_5_additional:
+  stage: test
+  script:
+    - cd week_5
+    - python -m unittest tests/a1com-tests.py
+    - python -m unittest tests/a1cor-tests.py
+  only:
+    - /^lab[-_].*5$/
+  except:
+    - master
+    - branches@CSUI-AdvProg-2017/lab-exercises
+  allow_failure: true
