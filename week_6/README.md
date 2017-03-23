@@ -88,6 +88,26 @@ is unique (not in observers list)
 
 ----------------------------------------------------------------------------------------------------------
 
+ Additional Observer: Learn how to make a Pythonic Refinement
+
+ 1. Open your Additional Observer had a slightly difference variation from the simple observer.
+ 2. In this Additional Observer, there are two classes of subscriber which had different notify method,
+ update in subscriber one and receive and subscriber two, and your task is to implement a notify which can
+ differentiate for each kind of subscriber, example:
+ 
+  - If you called notify to Subscriber One, it would run an update method
+  - If you called notify to Subscriber Two, it would run an receive method
+  - The Default Value for any Subscriber, it wuld run an update method
+ 
+ 3. Make sure you are differentiate those subscriber in register method. So, if the callback is None, it would
+ had the value of 'Update'. Everytime a subscriber register to a publisher, they will had a callback value (look
+ up in 'a_observer_main'), they will assign those two data in a 'dict' type. if only one data, it automatically
+ make the second data into an 'update'.
+
+ 4. For the notify method, you would use 'for each' of two data tuple in dict (subscriber,callback) in the list.
+    and use the callback('message') for notifying each subscriber. 
+
+-----------------------------------------------------------------------------------------------------------
 What is the Mediator pattern?
 
 Mediator pattern is a software design pattern which defines an object that
@@ -100,12 +120,12 @@ There is a module called Mediator which includes several classes:
 - `init`: Initiates the **TestManager** and bProblem (binary problem)
 - `setup`: Sets up the tests
 - `execute`: There are two procedures:
-    -  First, if there is a problem test, it would give
+    -  First, if there is not a bProblem, it would give
     the notification `"Executing the test"` and then sleeps for 0.1 second.
     - Second, if there isn't, it would give the notification `"Problem in the
     setup. Test not executed"`.
 - `tearDown`: There are two procedures:
-    - First, if there is a problem test, it would give
+    - First, if there is not a bProblem, it would give
     the notification `"Tearing down"` and then sleeps for 0.1 second and calls the
     method `publishReport` from the **TestManager** class.
     - Second, if it's not tearing down, it would give the notification
@@ -117,7 +137,7 @@ There is a module called Mediator which includes several classes:
 
 - `init`: Initiates the **Reporter**, **DataBase**, and **TestController** classes
 - `prepareReporting`: There is a variable called `rvalue` which gets its value
-by calling `insert` method in **DataBase**, and if `rvalue` equals 1, then it would
+by calling `insert` method in **DataBase**, and if `rvalue` equals -1, then it would
 call **TestController** to set the problem into 1, and then the **Reporter** would be
 calling its `prepare` method. 
 - `setReporter`: Sets up the **Reporter**
@@ -160,6 +180,12 @@ After completing all above, run the `mediator.py` to see what really happens.
     Tearing down
     Updating the test results in Database
     Reporting the results of Test
+
+
+Notes:
+
+> There are a randomize function in Database. it's okay if there a bit different in order
+> but the pattern always the same, just make sure each of every sentence are included
 
 * * *
 
