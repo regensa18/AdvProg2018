@@ -16,7 +16,7 @@ code snippets.
     5. [Exercise 4 - Composite, Decorator, Facade](week_4/README.md)
     6. [Exercise 5 - Chain of Responsibility & Command](week_5/README.md)
     7. [Exercise 6 - Mediator & Observer](week_6/README.md)
-    8. [Exercise 7 - TBA](#)
+    8. [Exercise 7 - CPU-bound Concurrency](week_7/README.md)
     9. [Exercise 8 - TBA](#)
     10. [Exercise 9 - TBA](#)
     10. [Exercise 10 - TBA](#)
