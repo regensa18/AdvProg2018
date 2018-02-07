@@ -1,10 +1,10 @@
-# EditorConfig for Advanced Programming 2017 Lab Exercises
+# EditorConfig for Advanced Programming 2018 lab exercises
 root = true
 
 [*]
 charset = utf-8
 
-[*.py]
+[*.{java, py}]
 indent_style = space
 indent_space = 4
 trim_trailing_whitespace = true
