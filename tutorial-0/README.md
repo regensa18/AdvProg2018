@@ -1,4 +1,4 @@
-# Lab 0: Development Environment Setup & Introduction to Git
+# Tutorial 0: Development Environment Setup & Introduction to Git
 
 CSCM602023 Advanced Programming @ Faculty of Computer Science Universitas
 Indonesia, Term 2 2017/2018
@@ -14,14 +14,7 @@ install all the required tools for your development environment. The second part
 is introduction to basic Git commands. You will learn how to create a Git
 repository in your local machine, saving your work into repository, and pushing
 your repository to a remote Git repository. The third part of the tutorial will
-introduce Git branches and how to work on branches.
-
-Before doing the tutorial, please fill in the following section with your personal
-information:
-
-- Name      : **TODO Write your name**
-- Student ID: **TODO Write your student ID number**
-- Class     : **TODO Write your class (possible values: A,B,C,INT)**
+introduce Git branching mechanism and how to work with branches.
 
 ## First Part: Development Environment Setup
 
@@ -68,6 +61,12 @@ subsequent commit(s).
 
 Enough with the background information. Let's start with the exercise!
 
+**Notes: GitLab project and repository that you will create in this part
+is different from GitLab project that you will use to store all tutorial
+work. Subsequent tutorials starting from `tutorial-1` next week will use
+the main GitLab project and repository that you cloned when reading in
+the root README file.**
+
 1. Start your command-prompt or shell. In Windows, run `Git Bash`. In
 Linux-based OS or Mac OS, you can use your favourite shell (e.g. bash,
 zsh).
@@ -103,7 +102,16 @@ try this command: `git config --list --local`
 Once you have configured your username and email, you may proceed to the
 next tutorial instructions.
 
-1. Create a new file named **README.md** write your name, NPM, and class.
+1. Create a new file named **README.md** and write your name, NPM, and class
+using following format:
+```
+Name: YOUR NAME HERE
+blank line
+NPM: YOUR STUDENT ID HERE
+blank line
+Class: YOUR CLASS HERE
+```
+
 2. Run `git status` again. Notice that there is an untracked file. It
 means that there is a file that is not yet tracked by Git.
 3. Add the file into Git by executing `git add README.md`.
@@ -111,18 +119,18 @@ means that there is a file that is not yet tracked by Git.
 previous `git status` execution. See that the `README.md` file is
 put into section named `Changes to be committed`. It means that
 README.md will be tracked by Git in the next commit.
+> As of now, README.md is not yet tracked by Git even though you
+> have run `git add README.md`. `git add` command only tells Git to
+> include changes in file(s) into Git's *staging area*.
 
-    As of now, README.md is not yet tracked by Git even though you
-    have run `git add README.md`. `git add` command only tells Git to
-    include changes in file(s) into Git's *staging area*. 
 5. To persist the changes permanently into Git, run `git commit`.
 A text editor (Vim) will appear where you have to write a message
 describing the commit.
+> How to use Vim: `h j k l` to move cursor in Vim, `i` to switch to
+> INSERT mode, `escape` to switch back to COMMAND mode, `:w` in COMMAND
+> mode to write content buffer to output stream, `:q` in COMMAND mode
+> to exit Vim.
 
-    How to use Vim: `h j k l` to move cursor in Vim, `i` to switch to
-    INSERT mode, `escape` to switch back to COMMAND mode, `:w` in COMMAND
-    mode to write content buffer to output stream, `:q` in COMMAND mode
-    to exit Vim.
 6. Once you have written the commit message, write the content and
 then exit the text editor. The changes will be persisted into a commit
 and stored in Git.
@@ -168,8 +176,8 @@ directory outside of your own local Git repository.
 5. Confirm that a new directory is created at the location where you
 executed the `git clone` command.
 
-This ends the first part of the tutorial. Make sure that you have
-informed your GitLab username to the teaching team (TA and lecturer)
+This ends the second part of the tutorial. Make sure that you have
+informed your GitLab username to the teaching team (TA or lecturer)
 so they can monitor your work.
 
 ## Third Part: Git Branches
@@ -187,9 +195,9 @@ that you are currently working at by using `git branch`.
 `git branch cool-feature`
 3. Switch to your new branch using `git checkout <BRANCHNAME>`. Example:
 `git checkout cool-feature`
+> Actually, step 2 and 3 can be shortened into a single `git checkout`
+> call: `git checkout -b <BRANCHNAME>`
 
-    Actually, step 2 and 3 can be shortened into a single `git checkout`
-    call: `git checkout -b <BRANCHNAME>`
 4. Verify that you have switched to the new branch. Try invoke `git branch -v`.
 The branch name in bold text is the current branch you are working on.
 
@@ -293,6 +301,10 @@ different content. One example is as follows:
 
 ### Mandatory Tasks Checklist
 
+**Notes: Tutorial 0 will not be graded. However, if you are able to accomplish
+all of the following tasks, including Additional Tasks, you will be ready to
+do subsequent problem sets next week.**
+
 - [ ] Install all required tools
 - [ ] Create a local Git repository and make at least one commit
 - [ ] Create a new GitLab project
@@ -304,6 +316,8 @@ directory (Hint: it should contain the same set of files that you have
 pushed before from the original directory)
 - [ ] Create a new branch other than `master` and make at least one commit
 in the new branch
+- [ ] Tell the teaching team your GitLab username and URL to your first
+repository via submission slot available on Scele
 
 ## Additional Tasks Checklist
 
