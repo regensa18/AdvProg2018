@@ -9,15 +9,28 @@ Welcome to the code repository for Advanced Programming 2018 course.
 This repository hosts weekly tutorial codes and other, course-related
 code snippets.
 
+## Table of Contents
+
+1. [Tutorial 0: Environment Setup & Introduction to Git](tutorial-0/README)
+
 ## TL;DR
 
-First week of the class:
+First week of the tutorial:
 
-1. Fork this repository to your account
-2. `git clone https://gitlab.com/<YOURNAME>/lab.git`
-3. Change directory to the recently cloned directory, i.e. `cd lab`
-4. `git remote add upstream https://gitlab.com/csui-advprog-2018/lab.git`
-5. Tell us your GitLab username and URL to your tutorial repository
+1. Create a new project on GitLab to store all tutorial work, e.g. `advprog-tutorial`
+2. Note the clone (HTTPS) URL of the repository on your new project
+3. Clone the repository to your local machine
+    - `git clone https://gitlab.com/<YOURNAME>/advprog-tutorial.git`
+4. Go to the GitLab project page of this (problem set) tutorial repository
+5. Note the clone (HTTPS) URL
+6. Back to your local tutorial work repository, add new remote named `upstream`
+that points to this repository
+    - `git remote add upstream https://gitlab.com/csui-advprog-2018/lab.git`
+7. Pull initial problem sets from `upstream`
+    - `git pull upstream master`
+8. Push initial problem sets to your own online Git repository on GitLab
+    - `git push -u origin master`
+9. Tell us your GitLab username and URL to your tutorial work repository
 
 If there are updates from upstream:
 
@@ -26,7 +39,7 @@ If there are updates from upstream:
     - Always choose latest commit from `upstream` when fixing merge
     conflict(s)
 3. Do not forget to commit your merged `master` branch and push it
-to your own `master` branch at GitLab repository
+to your own `master` branch at your GitLab project's repository
     - Use Git command: `git push origin master`
 
 Working on a tutorial problem set:
@@ -38,28 +51,32 @@ Working on a tutorial problem set:
 5. Commit your work frequently
 6. Write good commit message(s)
 7. If your work is ready for grading: `git push -u origin tutorial-n`
+8. Make Merge Request (MR) to merge your work branch to `master` and
+assign your TA as the assignee
 
 If you want to know the detailed explanation about each instructions above,
 please read the following sections.
 
 ## Initial Setup
 
-1. Create a fork of this repository to your GitLab account, which
-will create a copy of this repository under your own account.
-2. Open the forked repository page at
-`https://gitlab.com/<YOURNAME>/lab` where `<YOURNAME>`
-is your GitLab username.
-3. Set the clone URL to HTTPS and copy the URL into clipboard.
-4. Clone the repository into your local machine. Use Git command:
-`git clone https://gitlab.com/<YOURNAME>/lab.git <PATH>`
+1. Create a new GitLab project for storing all tutorial work, e.g.
+`advprog-tutorial`. **This GitLab project and its repository will be
+used to store all tutorial work starting from `tutorial-1` next week.**
+2. Open the project page and copy the HTTPS clone URL into clipboard
+3. Clone the repository into your local machine. Use Git command:
+`git clone https://gitlab.com/<YOURNAME>/advprog-tutorial.git <PATH>`
 where `<PATH>` is a path to a directory in your local machine.
-5. Go to the directory where the cloned repository is located in your
+4. Go to the directory where the cloned repository is located in your
 local machine.
-6. Add new remote called **upstream** that points to the original
-GitLab repository. Use Git command: `git remote add upstream https://gitlab.com/csui-advprog-2018/lab.git`
-7. Tell your TA about your GitLab username and URL to your tutorial
-repository so s/he can grade it later.
-8. Ensure that your repository page has visibility level set to
+5. Add new remote called **upstream** that points to this (problem set)
+repository. Use Git command: `git remote add upstream https://gitlab.com/csui-advprog-2018/lab.git`
+6. Pull initial problem sets from `upstream` to your local's `master`:
+`git pull upstream master`
+7. Push initial commits in your local's `master` to your online GitLab
+repository: `git push -u origin master`
+8. Tell your TA about your GitLab username and URL to your tutorial
+work repository so s/he can grade it later.
+9. Ensure that your repository page has visibility level set to
 **Internal** or **Public**. Check it in **Edit Project** menu at
 your repository page.
 
@@ -87,6 +104,10 @@ write a good commit message.
 8. Once you are ready to submit your work or you want to save it to
 your repository on GitLab, do a Git push. The Git command: 
 `git push -u origin tutorial-1`
+9. If you are ready to be graded by TA, make a Merge Request (MR) via
+Merge Request menu on GitLab. Set your tutorial branch as source and
+`master` as the target branch for for merging. After that, assign your TA
+as the assignee of the MR.
 
 ## Pulling Updates From Upstream
 
@@ -115,15 +136,24 @@ For each exercises, student can obtain grade ranging from **A (4)** to
 2. **B** if student completed **all mandatory tasks** and **at least
     half of the optional tasks**
 3. **C** if student completed **at least half of the mandatory tasks**
-4. **D** if student did not demonstrate their work to teaching
-    assistant, **regardless the completion of the tasks**
+4. **D** if student only completed **less than half of the mandatory tasks**
+    or did not demonstrate their work (in-person or merge request) on schedule
+    to teaching assistant, **regardless the completion of the tasks**
 5. **E** if student skipped the tutorial by doing nothing, e.g.
     no signs of work or branch related to the tutorial in the
     repository
 
-All students required to demonstrate their work to teaching assistant.
-The standard procedures on demonstrating lab work to TA will be provided
-later.
+All students required to demonstrate their work to teaching assistant by
+using code review. Code review shall be conducted by using Merge
+Request on GitLab and offline discussion if time permitting. Students
+are expected to follow-up questions and feedbacks given by TA.
+TA will give grade based on student's participation during code review and
+offline discussion. Tutorial work that achieved grade A - C will be accepted
+by TA and merged into student's `master` branch.
+
+**Warning: students are not allowed to merge their own tutorial branches
+to master without TA's supervision and approval. Only members of teaching
+team (TAs & lecturers) that allowed to approve/reject a MR made by student.**
 
 # License
 
