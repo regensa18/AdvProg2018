@@ -12,7 +12,7 @@ code snippets.
 ## Table of Contents
 
 1. [Tutorial 0: Environment Setup & Introduction to Git](tutorial-0/README.md)
-2. [Tutorial 1: TBD](#)
+2. [Tutorial 1: Strategy & Observer Pattern](tutorial-1/README.md)
 3. [Tutorial 2: TBD](#)
 4. [Tutorial 3: TBD](#)
 5. [Tutorial 4: TBD](#)
