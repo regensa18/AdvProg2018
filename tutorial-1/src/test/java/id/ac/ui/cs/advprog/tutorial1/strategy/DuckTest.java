@@ -48,27 +48,21 @@ public class DuckTest {
 
     @Test
     public void testDuckHasFlyBehaviorSetter() throws Exception {
-        Method setFlyBehavior = duckClass.getDeclaredMethod("setFlyBehavior");
+        Method setFlyBehavior = duckClass.getDeclaredMethod("setFlyBehavior",
+                FlyBehavior.class);
         Collection<Parameter> parameters = Arrays.asList(setFlyBehavior.getParameters());
         int methodModifiers = setFlyBehavior.getModifiers();
 
         assertTrue(Modifier.isPublic(methodModifiers));
-        assertTrue(parameters.stream()
-                .map(Parameter::getType)
-                .anyMatch(type -> type.getTypeName()
-                        .equals("id.ac.ui.cs.advprog.tutorial1.strategy.FlyBehavior")));
     }
 
     @Test
     public void testDuckHasQuackBehaviorSetter() throws Exception {
-        Method setQuackBehavior = duckClass.getDeclaredMethod("setQuackBehavior");
+        Method setQuackBehavior = duckClass.getDeclaredMethod("setQuackBehavior",
+                QuackBehavior.class);
         Collection<Parameter> parameters = Arrays.asList(setQuackBehavior.getParameters());
         int methodModifiers = setQuackBehavior.getModifiers();
 
         assertTrue(Modifier.isPublic(methodModifiers));
-        assertTrue(parameters.stream()
-                .map(Parameter::getType)
-                .anyMatch(type -> type.getTypeName()
-                        .equals("id.ac.ui.cs.advprog.tutorial1.strategy.QuackBehavior")));
     }
 }
