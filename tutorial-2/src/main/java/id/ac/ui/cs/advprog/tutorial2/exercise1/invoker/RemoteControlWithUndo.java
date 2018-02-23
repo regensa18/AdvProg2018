@@ -2,6 +2,7 @@ package id.ac.ui.cs.advprog.tutorial2.exercise1.invoker;
 
 import id.ac.ui.cs.advprog.tutorial2.exercise1.command.Command;
 import id.ac.ui.cs.advprog.tutorial2.exercise1.command.NoCommand;
+import java.lang.StringBuilder ;
 
 public class RemoteControlWithUndo {
 
@@ -31,14 +32,20 @@ public class RemoteControlWithUndo {
 
     public void onButtonWasPushed(int slot) {
         // TODO Complete me!
+        onCommands[slot].execute();
+        undoCommand = onCommands[slot];
+
     }
 
     public void offButtonWasPushed(int slot) {
         // TODO Complete me!
+        offCommands[slot].execute();
+        undoCommand = offCommands[slot];
     }
 
     public void undoButtonWasPushed() {
         // TODO Complete me!
+        undoCommand.undo();
     }
 
     @Override

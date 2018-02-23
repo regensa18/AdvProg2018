@@ -15,7 +15,7 @@ public class WeatherData extends Observable {
         notifyObservers();
     }
     
-    public WeatherData(){
+    public WeatherData() {
     	observers = new ArrayList<>();
     }
     
@@ -23,7 +23,7 @@ public class WeatherData extends Observable {
     	observers.add(other);
     }
     
-    public void notifyObservers(){
+    public void notifyObservers() {
     	ArrayList<Float> newData = new ArrayList<>();
     	newData.add(this.temperature);
     	newData.add(this.humidity);
