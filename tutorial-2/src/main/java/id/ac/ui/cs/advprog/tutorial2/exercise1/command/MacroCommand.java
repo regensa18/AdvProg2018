@@ -2,7 +2,8 @@ package id.ac.ui.cs.advprog.tutorial2.exercise1.command;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.ListIterator;
+import java.util.stream.Collectors;
+
 
 public class MacroCommand implements Command {
 
@@ -15,9 +16,10 @@ public class MacroCommand implements Command {
     @Override
     public void execute() {
         // TODO Complete me!
-        for(int i = 0; i < commands.size(); i++){
+        /*for(int i = 0; i < commands.size(); i++){
             commands.get(i).execute();
-        }
+        }*/
+        commands.stream().forEach(command -> command.execute());
     }
 
     @Override
