@@ -5,6 +5,7 @@ public class Singleton {
     // TODO Implement me!
     // What's missing in this Singleton declaration?
     private static Singleton uniqueInstance;
+    private Singleton () {};
 
     public static Singleton getInstance() {
         // TODO Implement me!
