@@ -4,9 +4,13 @@ public class Singleton {
 
     // TODO Implement me!
     // What's missing in this Singleton declaration?
+    private static Singleton uniqueInstance;
 
     public static Singleton getInstance() {
         // TODO Implement me!
-        return null;
+        if(uniqueInstance == null){
+            uniqueInstance = new Singleton();
+        }
+        return uniqueInstance;
     }
 }
