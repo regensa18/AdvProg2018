@@ -157,7 +157,9 @@ a Singleton object and describe the pros/cons of both approaches
     - Write your answer in [My Notes](#my-notes) section in this document
 
 ## My Notes
+lazy instantiation: create an instance only when its needed and not when the class is loaded
+eager instantiation: an instance is created right after the application or program started
 
-> Feel free to use this section to write your own notes related to your attempt
-> in doing the tutorial. You can also use this section to write text for
-> answering question(s) mentioned in the task checklists.
+In lazy initialization you give a public API to get the instance. use lazy instantiation to avoid
+unnecessary object creation.
+if the object is not taking too much space in the memory then you can use eager instantiation.
