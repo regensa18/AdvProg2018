@@ -161,7 +161,8 @@ the tutorial
 produce any warning when you execute `check` or `checkstyleMain` Gradle
 tasks
 - [ ] Make sure that you have 100% Code Coverage
-- [ ] Unit Tests that are created must have a good quality
+- [ ] Unit Tests that are created must have a good quality (Min 1 Positive and Negative
+Test Case per Function that you wanna test)
 - [ ] Explain in several paragraphs Why Spring Boot can be used as an example 
 for Model-View-Controller Pattern
     - Explain what is Model-View-Controller Pattern in 1 sentence
