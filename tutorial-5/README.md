@@ -56,6 +56,18 @@ Go to your console and run `gradle :tutorial-5:check`
 1. If you don't see any error, then check it on your Web Browser by accessing `http://localhost:8000`.
 You're going be able to see the Homepage.
 
+In some cases, the above steps will raise some error (especially if you work in Fasilkom UI Lab Environment).
+This is mostly because of the proxy setting, or the installed gradle version is different.
+Therefore, you need to use **Gradle Wrapper** as an alternative of installing a Gradle in the computer.
+Please refer to this [link](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper usage.
+About running Gradle Wrapper with proxy setting, please use this 
+[reference](https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy).
+To run Spring Boot using Gradle CLI manually, please refer to this [link](https://spring.io/guides/gs/spring-boot/).
+
+**Remember: Environment setting might be a little tricky in this lab, and you might be to put
+a lot of effort just to set the environment. Be patient, because environment setting is also
+part of the learning process as a programmer.**
+
 The following sections describe the tasks required in order to complete
 each pattern implementation.
 
