@@ -71,4 +71,3 @@ project(':tutorial-5') {
         testCompile group: 'junit', name: 'junit', version: junit4_version
     }
 }
-
