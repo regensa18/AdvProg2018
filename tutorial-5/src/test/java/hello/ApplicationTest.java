@@ -49,13 +49,14 @@ public class ApplicationTest {
                 .andExpect(content().string(containsString(name)));
     }
 
-    /*@Test
+    @Test
     public void greetingWithoutUser() throws Exception {
-        mockMvc.perform(get("/greeting"))
+        mockMvc.perform((get("/greeting"))
+                .param("name", ""))
                 .andExpect(content().string(containsString("This is my CV")));
 
 
-    }*/
+    }
 
 
 }
