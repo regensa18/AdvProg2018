@@ -11,10 +11,10 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name = "name", required = true)
                                        String name, Model model) {
-        if(name == null || name.equals("")) {
-                model.addAttribute("title", "This is my CV");
+        if (name == null || name.equals("")) {
+            model.addAttribute("title", "This is my CV");
         } else {
-                model.addAttribute("title", name + ", I hope you are interested to hire me");
+            model.addAttribute("title", name + ", I hope you are interested to hire me");
         }
 
         StringBuilder cv = new StringBuilder();
