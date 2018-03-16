@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GreetingController {
 
     @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = true)
+    public String greeting(@RequestParam(name = "name", required = false)
                                        String name, Model model) {
         if (name == null || name.equals("")) {
             model.addAttribute("title", "This is my CV");

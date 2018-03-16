@@ -51,8 +51,7 @@ public class ApplicationTest {
 
     @Test
     public void greetingWithoutUser() throws Exception {
-        mockMvc.perform((get("/greeting"))
-                .param("name", ""))
+        mockMvc.perform((get("/greeting")))
                 .andExpect(content().string(containsString("This is my CV")));
 
 
