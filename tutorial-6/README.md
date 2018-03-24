@@ -157,6 +157,8 @@ following questions:
 
 ## My Notes
 
-> Feel free to use this section to write your own notes related to your attempt
-> in doing the tutorial. You can also use this section to write text for
-> answering question(s) mentioned in the task checklists.
+1. -baris kode menjadi lebih simpel
+-baris kode mudah dimengerti
+2. - terlalu banyak redundansi
+-kode tidak simpel
+- penggunaan memori terlalu banyak
