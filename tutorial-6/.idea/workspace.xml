@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7dd1de8-7ab0-4165-8a74-cd247a6ae352" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rental.java" afterPath="$PROJECT_DIR$/src/main/java/Rental.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CustomerTest.java" afterPath="$PROJECT_DIR$/src/test/java/CustomerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MovieTest.java" afterPath="$PROJECT_DIR$/src/test/java/MovieTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RentalTest.java" afterPath="$PROJECT_DIR$/src/test/java/RentalTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../.gradle/" />
@@ -88,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CustomerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1">
@@ -121,14 +112,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RentalTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RentalTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/RentalTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1794,9 +1785,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/CustomerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MovieTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/RentalTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rental.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RentalTest.java" />
       </list>
     </option>
   </component>
@@ -2034,7 +2025,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521807004816</updated>
-      <workItem from="1521807011864" duration="8008000" />
+      <workItem from="1521807011864" duration="8317000" />
     </task>
     <servers />
   </component>
@@ -2071,7 +2062,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8008000" />
+    <option name="totallyTimeSpent" value="8317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -2148,17 +2139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/RentalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -2185,6 +2165,17 @@
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#405#406#0" expanded="true" />
             <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RentalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
           </folding>
         </state>
       </provider>

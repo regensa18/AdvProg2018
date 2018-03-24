@@ -12,8 +12,8 @@ public class RentalTest {
 
     @Before
     public void setUp() {
-        Movie movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
-        Rental rent = new Rental(movie, 3);
+        movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
+        rent = new Rental(movie, 3);
     }
 
     @Test
