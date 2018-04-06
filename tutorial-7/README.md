@@ -165,6 +165,11 @@ into functional style
 
 ## My Notes
 
-> Feel free to use this section to write your own notes related to your attempt
-> in doing the tutorial. You can also use this section to write text for
-> answering question(s) mentioned in the task checklists.
+jumlah baris di semua file berubah menjadi sangat pendek. primeChecker, ScoreGrouping,
+WordCount fungsinya menjadi hanya tiga baris. File Applicant kelas-kelas lainnya bisa
+dihapus juga karena memakai functional programming.
+
+Menurut saya, memakai declarative style programming sangat seru. dengan memakai functional
+programming, kode kita menjadi lebih rapih dan efisien. yang menjadi downside declarative
+programming adalah kita harus belajar dan membaca apa saja yang Java 8 punya di library
+sehingga kita bisa menggunakan library tersebut dengan efisien.
