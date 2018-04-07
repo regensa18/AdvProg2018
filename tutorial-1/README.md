@@ -151,6 +151,26 @@ and `java.util.Observer`
 
 ## My Notes
 
-> Feel free to use this section to write your own notes related to your attempt
-> in doing the tutorial. You can also use this section to write text for
-> answering question(s) mentioned in the task checklists.
+Perbedaan sekaligus keuntungan menggunakan Observer buatan Java:
+
+
+1.Objek yang berperan sebagai subject mengextend kelas Observable
+2.Untuk mengirim sebuah notifikasi, maka data harus diupdate dulu sebelum observer dinotify
+3.Perbedaan dalam parameter observer di method update(). Kalau observernya tidak
+dispesifikasikan maka diisi null
+4.Untuk buatan java, kita harus menjadikan subject sebagai subclass dari class Observable
+yang akan mengurangi reusability
+
+
+Contoh-contoh strategy pattern di real life:
+
+
+1.Sorting
+Kita ingin menyortir angka-angka, tapi tidak tahu mau memakai bubbleSort, quickSort, atau
+metode sortir lainnya
+2.Validation
+Kita ingin memvalidasi suatu item menurut suatu aturan, tapi kita tidak tahu apa saja
+spesifikasi aturan-aturan tersebut
+3.Games
+Kita mau pemain jalan atau lari, tapi memungkinkan juga dia bisa berenang, lompat, atau
+movement lainnya
