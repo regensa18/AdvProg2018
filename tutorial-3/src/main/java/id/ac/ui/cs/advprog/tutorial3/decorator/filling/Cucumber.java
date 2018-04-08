@@ -2,7 +2,7 @@ package id.ac.ui.cs.advprog.tutorial3.decorator.filling;
 
 import id.ac.ui.cs.advprog.tutorial3.decorator.Food;
 
-public class Cucumber extends FillingDecorator {
+public class Cucumber extends Food {
     Food food;
 
     public Cucumber(Food food) {

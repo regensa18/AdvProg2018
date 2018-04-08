@@ -13,7 +13,7 @@ public enum BreadProducer {
      * @return Food that represent bread type, deafult is Thin Bun
      */
     public Food createBreadToBeFilled() {
-        Food returnedFood = null;
+        Food returnedFood;
         switch (this) {
             case THIN_BUN:
                 returnedFood = new ThinBunBurger();

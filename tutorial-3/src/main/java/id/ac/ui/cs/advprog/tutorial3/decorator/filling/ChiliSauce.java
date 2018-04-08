@@ -2,7 +2,7 @@ package id.ac.ui.cs.advprog.tutorial3.decorator.filling;
 
 import id.ac.ui.cs.advprog.tutorial3.decorator.Food;
 
-public class ChiliSauce extends FillingDecorator {
+public class ChiliSauce extends Food {
     Food food;
 
     public ChiliSauce(Food food) {
