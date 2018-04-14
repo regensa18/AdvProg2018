@@ -14,6 +14,24 @@ public class WeatherData extends Observable {
     public void measurementsChanged() {
         notifyObservers();
     }
+    
+    public WeatherData() {
+    	observers = new ArrayList<>();
+    }
+    
+    public void addObserver(Observer other){
+    	observers.add(other);
+    }
+    
+    public void notifyObservers() {
+    	ArrayList<Float> newData = new ArrayList<>();
+    	newData.add(this.temperature);
+    	newData.add(this.humidity);
+    	newData.add(this.pressure);
+    	for(int i = 0; i < observers.size(); i++){
+    		observers.get(i).update(this, newData);
+    	}
+    }
 
     public WeatherData(){
         observers = new ArrayList<>();
@@ -72,5 +90,4 @@ public class WeatherData extends Observable {
         // TODO Complete me!
         this.pressure = pressure;
         measurementsChanged();
-    }
 }
