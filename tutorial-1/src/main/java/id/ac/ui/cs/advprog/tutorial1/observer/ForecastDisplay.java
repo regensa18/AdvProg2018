@@ -1,5 +1,6 @@
 package id.ac.ui.cs.advprog.tutorial1.observer;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -10,6 +11,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
     public ForecastDisplay(Observable observable) {
         // TODO Complete me!
+    	observable.addObserver(this);
     }
 
     @Override
@@ -28,6 +30,12 @@ public class ForecastDisplay implements Observer, DisplayElement {
     public void update(Observable o, Object arg) {
         if (o instanceof WeatherData) {
             // TODO Complete me!
+        	if(arg instanceof ArrayList<?>){
+        		ArrayList<Float> newData = (ArrayList<Float>) arg;
+        		this.lastPressure = currentPressure;
+        		currentPressure = newData.get(2);
+        		display();
+        	}
         }
     }
 }

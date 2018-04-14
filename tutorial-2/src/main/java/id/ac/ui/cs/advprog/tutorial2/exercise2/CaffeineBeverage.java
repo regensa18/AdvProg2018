@@ -4,6 +4,11 @@ public abstract class CaffeineBeverage {
 
     public final void prepareRecipe() {
         // TODO Complete me!
+        boilWater();
+        brew();
+        pourInCup();
+        addCondiments();
+
     }
 
     protected abstract void addCondiments();
