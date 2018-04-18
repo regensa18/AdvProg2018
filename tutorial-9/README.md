@@ -67,8 +67,8 @@ as well. You can check for lint issues in test code by executing
 > use `google_csui_checks.xml` Checkstyle configuration in the `config`
 > directory.
 
-There is two additional tasks in this tutorial and described in the following
-subsection.
+There are two additional tasks in this tutorial and described in the following
+subsections.
 
 ### Testing Controller in Isolation
 
