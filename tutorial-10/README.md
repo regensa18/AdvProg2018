@@ -9,14 +9,15 @@ Your main task in this tutorial is to check whether the currently used algorithm
 meaning that the currently used algorithm will reach an optimum running time given benchmark test. 
 After you check it, you also have a responsibility to use another algorithm if the currently used 
 algorithm is not a good one and explain the reason why your new algorithm is a better algorithm.
-As a reminder of what is benchmark testing what kind of benchmark testing you can do, you
-may refer to this [video](https://www.youtube.com/watch?v=Bi0E7w1ZFFA) (You are encouraged to watch
-the first ten minutes of this video, if you want to know more complex thing then you may proceed to
-finish the video). You also need to watch this [article](http://tutorials.jenkov.com/java-performance/jmh.html)
-to gain more knowledge about java performance.
+As a reminder of what benchmark testing is and what you can do with it, you may refer to this
+[video](https://www.youtube.com/watch?v=Bi0E7w1ZFFA) (You are encouraged to watch the first ten
+minutes of this video, if you want to know more complex thing then you may proceed to finish the
+video). You may also want to quickly read this [article](http://tutorials.jenkov.com/java-performance/jmh.html)
+to gain more knowledge about Java performance.
 
-> DISCLAIMER : In this tutorial *you are not required* to use JMH (Java Microbenchmark Harness). You
-only need to know about JMH, but not required to implement it in this tutorial.
+> Attention: In this tutorial *you are not required* to use JMH (Java
+> Microbenchmark Harness). You only need to know about JMH, but not required
+> to implement it in this tutorial.
 
 ## Mandatory Tasks Description
 
@@ -29,8 +30,8 @@ to check whether the current algorithm is already the best algorithm, if not the
 implement a better one. You don't have to delete the available template code, but you may add 
 the new code at the same file as the template code.
 
->Tips : You must not compare the running time printed in your console with your friend because
-the running time may vary for different hardware specification.
+> Tips: You must not compare the running time printed in your console with your
+> friend because the running time may vary for different hardware specification.
 
 ## Additional Tasks Description
 
@@ -39,8 +40,8 @@ kind of matrix multiplication algorithm (Basic and Strassen Matrix Multiplicatio
 Basic Algorithm is an algorithm that implementing the sequence of how we do matrix multiplication,
 you may need to re-open or find how to multiply 2 matrix before continuing this task. Strassen 
 Algorithm is also a matrix multiplication algorithm with a different approach, you may need
-to search this algorithm in some book or internet webpage. If you run the `Main` class, you can see that both of this algorithm giving almost the same
-running time.
+to search this algorithm in some book or internet webpage. If you run the `Main`
+class, you can see that both of this algorithm giving almost the same running time.
 
 ### Requested Task
 
@@ -122,11 +123,14 @@ provided by OS (e.g. time in Unix-based OS) or by measuring it directly in code
 - [ ] Check and Optimizing Searching Algorithm
     - [ ] Check whether the currently used algorithm is optimal or not.
     - [ ] Implement a better algorithm (if you think that the currently used algorithm
-    is not optimal). You may combine the process by sorting the sequence first before searching.
+    is not optimal). You may combine the process by sorting the sequence first
+    before searching.
     - [ ] Create a test case to check whether your algorithm is successfully 
     search a speficic value in the sequence
-- [ ] Explain in  My notes section, whether the current benchmark test design is already good
-to measure the elapsed time of algorithm or not? Explain why?
+- [ ] Explain in [My Notes](#my-notes) section, whether the current benchmark
+test design is already good to measure the elapsed time of algorithm and explain why!
+    - Hint: Recall how processes and threads are executed (from your OS course)
+    and do research about how JVM runs and compiles Java code
 - [ ] Push your commits to online Git repository on your GitLab project
 
 ## Additional Tasks Checklist
@@ -135,7 +139,7 @@ to measure the elapsed time of algorithm or not? Explain why?
 test code
 - [ ] Refactor `convertInputFileToMatrix` to handle non-square matrix input
 - [ ] Provide Unit Test to check whether your implementation is correct
-- [ ] Define your benchmark test for basic and strassen multiplication algorithm to measure
+- [ ] Define your benchmark test for basic and Strassen multiplication algorithm to measure
 elapsed time.
     - [ ] Explain why you decided to design your benchmark test as it is in My notes section.
     - [ ] Report the result of your benchmark test in My notes section 
