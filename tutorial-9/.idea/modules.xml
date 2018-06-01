@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/202205884/advprog-lab.iml" filepath="$PROJECT_DIR$/.idea/modules/202205884/advprog-lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1.iml" filepath="$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1.iml" group="tutorial-1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-10.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-10.iml" group="tutorial-10" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-10_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-10_main.iml" group="tutorial-10" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tutorial-10_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tutorial-10_test.iml" group="tutorial-10" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1_main.iml" group="tutorial-1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1549374795/tutorial-1_test.iml" group="tutorial-1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1549374794/tutorial-2.iml" filepath="$PROJECT_DIR$/.idea/modules/-1549374794/tutorial-2.iml" group="tutorial-2" />
