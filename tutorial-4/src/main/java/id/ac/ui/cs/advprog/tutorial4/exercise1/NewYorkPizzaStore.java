@@ -14,7 +14,6 @@ public class NewYorkPizzaStore extends PizzaStore {
         Pizza pizza = null;
         PizzaIngredientFactory ingredientFactory =
                 new NewYorkPizzaIngredientFactory();
-
         if (item.equals("cheese")) {
 
             pizza = new CheesePizza(ingredientFactory);
